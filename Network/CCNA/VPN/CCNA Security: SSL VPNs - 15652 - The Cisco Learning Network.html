@@ -1,0 +1,1269 @@
+    
+	
+<!DOCTYPE html><html lang="en"><head><script src=""></script><script src="//assets.adobedtm.com/942c89a923be7d4c25e985286fd4433b01b50271/satelliteLib-46f5b94072768357d3b07c4f7147f5897a11132f.js"></script><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><meta name="keywords" content="ccna_security, ip, lecture_series, security, ssl, video" /><meta charset="utf-8" /><meta name="number_of_replies" content="19" /><meta name="date" content="Fri Mar 14 01:56:08 PDT 2014" /><meta name="rating" content="4.667" /><meta name="country" content="US" /> <meta name="language" content="en" /><meta name="accessLevel" content="Guest" /><meta name="accessLevel" content="Customer" /><meta name="accessLevel" content="Partner" /><meta property="og:image" content="/themes/cln/images/social-media-thumbnail.jpg"/><!--[if IE]><![endif]--><title>CCNA Security: SSL VPNs - 15652 - The Cisco Learning Network</title>
+<script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UgAHU1RADwAAUlBQBQ=="};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(15),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,o){try{d?d-=1:i("err",[o||new UncaughtException(t,n,e)])}catch(s){try{i("ierr",[s,c.now(),!0])}catch(u){}}return"function"==typeof f&&f.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t){i("err",[t,c.now()])}var i=t("handle"),a=t(16),s=t("ee"),c=t("loader"),f=window.onerror,u=!1,d=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(l){"stack"in l&&(t(8),t(7),"addEventListener"in window&&t(5),c.xhrWrappable&&t(9),u=!0)}s.on("fn-start",function(t,n,e){u&&(d+=1)}),s.on("fn-err",function(t,n,e){u&&(this.thrown=!0,o(e))}),s.on("fn-end",function(){u&&!this.thrown&&d>0&&(d-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(8),s=t(7),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",y="pushState",g=t("loader");g.features.stn=!0,t(6);var b=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof b&&(this.bstStart=g.now())}),o.on(w,function(t,n){var e=t[0];e instanceof b&&i("bst",[e,n,this.bstStart,g.now()])}),a.on(m,function(t,n,e){this.bstStart=g.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),this.bstType])}),s.on(m,function(){this.bstStart=g.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,g.now(),"requestAnimationFrame"])}),o.on(y+p,function(t){this.time=g.now(),this.startPath=location.pathname+location.hash}),o.on(y+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t(18)(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){var r=t("ee").get("history"),o=t(18)(r);n.exports=r,o.inPlace(window.history,["pushState","replaceState"],"-")},{}],7:[function(t,n,e){var r=t("ee").get("raf"),o=t(18)(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],8:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t(18)(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],9:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,y,"fn-",s)}function i(t){g.push(t),h&&(x?x.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<g.length;t++)r([],g[t]);g.length&&(g=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t(18)(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",y=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],g=[];n.exports=u;var b=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,b),b.prototype=p.prototype,d.inPlace(b.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var x=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],10:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<d;r++)t.removeEventListener(u[r],this.listener,!1);if(!n.aborted){if(e.duration=a.now()-this.startTime,4===t.readyState){n.status=t.status;var i=o(t,this.lastSize);if(i&&(e.rxSize=i),this.sameOrigin){var c=t.getResponseHeader("X-NewRelic-App-Data");c&&(n.cat=c.split(", ").pop())}}else n.status=0;e.cbTime=this.cbTime,f.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime])}}}function o(t,n){var e=t.responseType;if("json"===e&&null!==n)return n;var r="arraybuffer"===e||"blob"===e||"json"===e?t.response:t.responseText;return h(r)}function i(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.sameOrigin=e.sameOrigin}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(11),f=t("ee"),u=["load","error","abort","timeout"],d=u.length,l=t("id"),p=t(14),h=t(13),m=window.XMLHttpRequest;a.features.xhr=!0,t(9),f.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,p&&(p>34||p<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),f.on("open-xhr-start",function(t){this.params={method:t[0]},i(this,t[1]),this.metrics={}}),f.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid)}),f.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=h(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"===t.type&&(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{f.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<d;s++)n.addEventListener(u[s],this.listener,!1)}),f.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),f.on("xhr-load-added",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),f.on("xhr-load-removed",function(t,n){var e=""+l(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),f.on("addEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-added",[t[1],t[2]],n)}),f.on("removeEventListener-end",function(t,n){n instanceof m&&"load"===t[0]&&f.emit("xhr-load-removed",[t[1],t[2]],n)}),f.on("fn-start",function(t,n,e){n instanceof m&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),f.on("fn-end",function(t,n){this.xhrCbStart&&f.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)})}},{}],11:[function(t,n,e){n.exports=function(t){var n=document.createElement("a"),e=window.location,r={};n.href=t,r.port=n.port;var o=n.href.split("://");!r.port&&o[1]&&(r.port=o[1].split("/")[0].split("@").pop().split(":")[1]),r.port&&"0"!==r.port||(r.port="https"===o[0]?"443":"80"),r.hostname=n.hostname||e.hostname,r.pathname=n.pathname,r.protocol=o[0],"/"!==r.pathname.charAt(0)&&(r.pathname="/"+r.pathname);var i=!n.protocol||":"===n.protocol||n.protocol===e.protocol,a=n.hostname===document.domain&&n.port===e.port;return r.sameOrigin=i&&(!n.hostname||a),r}},{}],12:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(15),s=t(16),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}finally{c.emit("fn-end",[f.now()],e)}}}};a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now()])}},{}],13:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],14:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],15:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],16:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],17:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],18:[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(16),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=h(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([g,e,r,a]),a}}function p(t,n){v[t]=h(t).concat(n)}function h(t){return v[t]||[]}function m(t){return d[t]=d[t]||o(e)}function w(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var v={},y={},g={on:p,emit:e,get:m,listeners:h,context:n,buffer:w,abort:a,aborted:!1};return g}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(15),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!x++){var t=b.info=NREUM.info,n=l.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=l.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===l.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return E.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(15),u=t("ee"),d=window,l=d.document,p="addEventListener",h="attachEvent",m=d.XMLHttpRequest,w=m&&m.prototype;NREUM.o={ST:setTimeout,SI:d.setImmediate,CT:clearTimeout,XHR:m,REQ:d.Request,EV:d.Event,PR:d.Promise,MO:d.MutationObserver};var v=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1044.min.js"},g=m&&w&&w[p]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:v,features:{},xhrWrappable:g};t(12),l[p]?(l[p]("DOMContentLoaded",i,!1),d[p]("load",r,!1)):(l[h]("onreadystatechange",o),d[h]("onload",r)),c("mark",["firstbyte",s],null,"api");var x=0,E=t(17)},{}]},{},["loader",2,10,4,3]);</script>
+<script>
+    if (top != self) {
+        var isSafeTopUrl = false;
+        try {
+            var topUrl = top.location.href;
+            var topUrlQsIdx = topUrl.indexOf('?');
+            if (topUrlQsIdx > 0) {
+                topUrl = topUrl.substring(0, topUrlQsIdx);
+            }
+            topUrl = topUrl.toLowerCase();
+            var safeTopUrls = new Array( 'https://learningnetwork.cisco.com/theme-site.jspa', 'https://learningnetwork.cisco.com/skin-advanced.jspa', 'https://learningnetwork.cisco.com/skin-advanced!UploadSkinZip.jspa' );
+            for (var i = 0; i < safeTopUrls.length; i++) {
+                if (safeTopUrls[i].toLowerCase() == topUrl) {
+                    isSafeTopUrl = true;
+                    break;
+                }
+            }
+        } catch (err) {
+        }
+        if (!isSafeTopUrl) {
+            top.location = location;
+        }
+    }
+</script>
+<link rel="stylesheet" href="/7.0.3.0/styles/jive-base.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/styles/jive.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/styles/jive-icons.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/styles/jive-streambuilder.css" type="text/css" media="all" /><link rel="stylesheet" href="/7.0.3.0/themes/cln_1.0/styles/cln-theme.css?v=67b28f41528d81dcdfc43dfa0c4b615efd443acd2e09777f" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/themes/cln_1.0/styles/tooltipster.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/themes/cln_1.0/styles/tooltipster-shadow.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/themes/cln_1.0/fonts/fonts.css" type="text/css" media="all"/>	<script type="text/javascript">var newAkamaiToken =  '?hdnea\x3dst\x3d1511153601~exp\x3d1511157201~acl\x3d\/*~hmac\x3db64b5ba460547482146c3cb82480e9e10355b5b8f1f0ddb56e32e54477a58d9d';</script><link rel="search" href="/opensearch.xml" title="Cisco Learning Home" type="application/opensearchdescription+xml"/><link rel="shortcut icon" type="image/x-icon" href="/themes/cln/images/favicon/favicon.ico" /><link rel="image_src" href="/themes/cln/images/social-media-thumbnail.jpg" /><!--[if lt IE 9]><script src="/7.0.3.0/resources/scripts/vendor/html5shiv.min.js"></script><![endif]--><script src="/7.0.3.0/resources/scripts/gen/0bd6bd8730d97e29addab79d89e93432.js"></script>
+
+        <meta name="description" content="The Cisco Learning Network proudly presents a new series of video lectures on the topic of “CCNA Security: SSL VPNs.”    If you are studying for your CCNA 15652"/>
+    <meta property="og:description" content="The Cisco Learning Network proudly presents a new series of video lectures on the topic of “CCNA Security: SSL VPNs.”    If you are studying for your CCNA"/>
+
+	<link rel="stylesheet" href="/7.0.3.0/styles/jive-content.css" type="text/css" media="all" />
+	<link rel="stylesheet" href="/7.0.3.0/styles/tiny_mce3/themes/advanced/skins/default/content.css" type="text/css" media="all" />
+    <!-- UI-Extensions (if any)-->
+
+
+    <link rel="canonical" href="https://learningnetwork.cisco.com/docs/DOC-15652" />
+        <link rel="alternate" type="application/rss+xml"
+            title="CCNA Security: SSL VPNs Version History Feed"
+            href="/community/feeds/document-history/DOC-15652" />
+
+        <link rel="alternate" type="application/rss+xml"
+            title="CCNA Security: SSL VPNs Comments Feed"
+            href="/community/feeds/document-comments/DOC-15652" />
+
+    
+
+
+
+
+
+
+
+
+    <script type="text/javascript">
+        var documentID = 15652;
+
+        function publishDraft() {
+            var form = $j('#documentPublishForm');
+            jive.util.securedForm(form).always(function() {
+                form.submit();
+            });
+        }
+
+        function restoreVersion(version) {
+           if (confirm('Are you sure you want to restore this version of the document text?')){
+                var form = $j('#documentRestoreForm');
+                jive.util.securedForm(form).always(function() {
+                    form.submit();
+                });
+           }
+        }
+
+    </script>
+
+    <!-- BEGIN action bar, only for non-binary documents -->
+
+    
+
+    <!-- END action bar -->
+<link rel="stylesheet" href="/7.0.3.0/plugins/video_7.0.0-dev/resources/styles/jive-videomodule.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/plugins/antivirus_7.0.3.1/resources/styles/antivirus.css?v=7.0.2" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/plugins/gamification_7.0.0-dev/resources/styles/n4jive.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/plugins/gamification_7.0.0-dev/resources/styles/lib/n4jive/n4jive.core.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/plugins/gamification_7.0.0-dev/resources/styles/lib/n4jive/nitro4x.base.css" type="text/css" media="all"/><link rel="stylesheet" href="/7.0.3.0/resources/styles/exobjects-icons/jive-exobjects-icons.css" type="text/css" media="all"/><script>(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,'script','//www.google-analytics.com/analytics.js','ga'); ga('create', 'UA-3716712-1', 'auto'); ga('send', 'pageview');</script></head><body class="jive-body-content j-doc j-header-mode-simple"><a id="top"></a><div id="j-header-wrap" data-company-name="" data-no-user-bar="false" role="banner" ><header id="j-header" class="clearfix"><div class="header-upper"><div class="header-inner"><span id="logo" class="js-logo"><a role="img" title="The Cisco Learning Network" href="/" class="j-header-logo"></a><span>The Cisco Learning Network</span></span><ul id="j-satNav-wrap"><li class="js-satellite-nav-container"><span id="j-satNav-indicator"></span><a id="j-satNav" class="j-globalNavLink j-ui-elem" href="#"><span class="nav-link j-ui-elem"><img class="jive-avatar" src="/people/remosyxu%40gmail.com/avatar/30.png?a=6779" data-avatarId="6779" data-username="remosyxu%40gmail.com" height="30" data-height="30"width="30" data-random="17733779561980258" alt="Remosy" title="Remosy" /><span class="j-user-name j-navLabel">Remosy</span><span id="j-satNav-more2" class="j-nav-more j-ui-elem"></span></span></a><div id="j-satNav-menu" class="clearfix" style="display:none;"></div></li><li class="j-nav-create j-nav-cmenu j-globalNav-li js-create-nav-container" aria-haspopup="true"><a href="#" id="navCreate" class="j-globalNavLink j-ui-elem" role="menuItem"><span class="nav-link j-ui-elem"><span class="j-ui-elem j-create-icon"></span><span class="j-navLabel">Create</span><span class="j-ui-elem j-nav-more"></span></span></a><div id="menuCreate" class="j-quick-menu" style="display: none;"></div></li><li class="cln-header-links"><a class="j-globalNavLink" href="/groups/premium"><span class="nav-link">Premium Library</span></a><a class="j-globalNavLink" href="/community/help"><span class="nav-link">Help</span></a></li></ul></div></div><div class="header-lower"><div class="header-inner"><!-- Navigational buttons/links --><nav id="j-globalNav-bg" role="navigation" aria-label="Jive" data-mode="basic"><!--<ul id="j-globalNav" role="menubar" class="j-globalNav"><li id="jive-nav-link-home"class="  j-globalNav-li j-ui-elem"><a  href="/home"  class="j-globalNavLink j-ui-elem " role="menuitem"><span class="nav-link  ">Home</span></a></li><li id="jive-nav-link-work"class="  j-globalNav-li j-ui-elem"><a  href="/content"  class="j-globalNavLink j-ui-elem " role="menuitem"><span class="nav-link  ">Content</span></a></li><li id="jive-nav-link-conx"class="  j-globalNav-li j-ui-elem"><a  href="/people"  class="j-globalNavLink j-ui-elem " role="menuitem"><span class="nav-link  ">People</span></a></li><li id="jive-nav-link-places"class="  j-globalNav-li j-ui-elem"><a  href="/places"  class="j-globalNavLink j-ui-elem " role="menuitem"><span class="nav-link  ">Places</span></a></li><div id="menuCreate" class="j-quick-menu" style="display: none;"></div></ul>--><ul id="meganav"><li ><a class="navLink" href="/" ><span>Home</span></a></li><li ><a class="navLink" href="/community/certifications" ><span>Certifications</span></a></li><li ><a class="navLink" href="/community/learning_center/featured-groups" ><span>Community</span></a></li><li ><a class="navLink" href="/community/learning_center" ><span>Learning Center</span></a></li><li ><a class="navLink" href="/community/it_careers" ><span>IT Careers</span></a></li><li class="solo"><a class="navLink" href="https://learningnetworkstore.cisco.com" target="_blank"><span>Store</span></a></li></ul><div id="j-links"><ul class="j-globalNav"></ul><div id="j-spotlight-search" role="search" data-mode="basic"><span id="searchpopupanchor" class="j-ui-elem j-search-left"></span><span><label for="autosearch" class="j-508-label">Search</label><input data-spotlight-enabled="true" id="autosearch" class="j-ui-elem" data-component="autosearch" data-popup-anchor="searchpopupanchor" placeholder="Search" type="text" role="combobox" data-hidetypes="  " data-community-name="Cisco Learning Home"/></span><span class="j-ui-elem j-search-right"></span><span class="jive-icon-sml jive-glyph-delete" data-component="button" data-type="clear" data-field="autosearch"></span></div></div><a href="#" id="nav-browse-menu" class="">Browse<span class="j-ui-elem j-nav-more"></span></a><div style="display:none" id="nav-browse-dropdown"><ul><li class=""><a href="/content">Content</a></li><li class=""><a href="/people">People</a></li><li class=""><a href="/places">Places</a></li></ul></div></nav></div>	<div id="meganav-expand" style="display:none;"><ul style="display:none;">	<li><a href="/">Home</a></li>	<li><span>News and Events</span><div style="display:none;"><ul >	<li><span>News and Events</span></li>	<li><a href="/community/celebrates">Learning@Cisco</a></li>	<li><a href="http://na-cs.marketo.com/lp/cisco/LearningatCiscoOptIn.html">Stay Connected</a></li>	<li><a href="/community/events">Recent Events</a></li>	<li><a href="/community/archived_events">Archived Events</a></li></ul></div></li>	<li><span>Resources</span><div style="display:none;"><ul >	<li><span>Resources</span></li>	<li><a href="/community/help/getting_started_guide">Getting Started Guide</a></li>	<li><a href="/community/help">Contact Us/Help</a></li>	<li><a href="/community/connections/with_learning_partners">Learning Partner Overview</a></li>	<li><span>Cisco Learning Credits</span><div style="display:none;"><ul >	<li><span>Cisco Learning Credits</span></li>	<li><a href="/docs/DOC-29429">Cisco Training</a></li>	<li><a href="/docs/DOC-29196">Exam Vouchers</a></li></ul></div></li>	<li><a href="/community/connections/espanol">Recursos Educativos</a></li>	<li><a href="/community/connections/russian">Russian Learning Resources</a></li>	<li><a href="/community/connections/jp">Cisco Learning Network Japan</a></li>	<li><a href="/community/connections/china">Cisco Learning Network China</a></li>	<li><a href="/community/connections/careers_in_india">Careers in India</a></li>	<li><a href="/community/learning_center/team_wikis/ccsi-forum">CCSI Forum</a></li>	<li><a href="/docs/DOC-29644">Packet Tracer And Alternative Lab Solutions</a></li>	<li><a href="/docs/DOC-27345">Certification Tracking System How-To Videos</a></li>	<li><a href="/docs/DOC-28399">Cisco Learning Network Streams How-To Video</a></li>	<li><a href="/docs/DOC-32370">How to Update Your Email Address &amp; Other Personal Information</a></li>	<li><a href="/docs/DOC-32532">How to Update Your Profile Privacy Settings</a></li>	<li><a href="/docs/DOC-29828">Cisco Learning Network on the Jive Mobile App</a></li></ul></div></li>	<li><span>Certification Information</span><div style="display:none;"><ul >	<li><span>Certification Information</span></li>	<li><a href="http://ciscocert.force.com/english">Certifications &amp; Communities Support</a></li>	<li><a href="https://cisco.pearsoncred.com/durango/do/login?ownername=cisco&amp;channel=cisco&amp;basechannel=integral7">Certification Tracking System</a></li>	<li><a href="http://www.vue.com/cisco/">Register for an Exam</a></li>	<li><a href="http://www.pearsonvue.com/accommodations/pv_review.asp?clientName=Cisco%20Systems">ADA Accommodations Request</a></li>	<li><a href="/docs/DOC-4454">Find Cisco Expert-Level Training Partners</a></li></ul></div></li>	<li><span>About Us</span><div style="display:none;"><ul >	<li><span>About Us</span></li>	<li><a href="/community/about">Overview</a></li>	<li><a href="/community/about/cisco-designated-vips">Cisco Designated VIPs</a></li>	<li><a href="/community/about/community-spotlight-awards">Community Spotlight Awards</a></li>	<li><a href="/community/about/subject-matter-experts">Subject Matter Experts</a></li>	<li><a href="/community/about/cisco-certification-exam-program-managers">Cisco Certification Exam Program Managers</a></li>	<li><a href="/community/about/ccie-advisory-council">CCIE Advisory Council</a></li>	<li><a href="/community/about/industry-recognition">Industry Recognition</a></li>	<li><a href="https://learningnetwork.cisco.com/docs/DOC-29277">Affiliate Marketing Program</a></li></ul></div></li>	<li><span>External Links</span><div style="display:none;"><ul >	<li><span>External Links</span></li>	<li><a href="http://www.ciscopress.com/">Cisco Press</a></li>	<li><a href="http://tools.cisco.com/GlobalLearningLocator/LLocatorHome.do">Locate Cisco Authorized Training</a></li>	<li><a href="http://www.cisco.com/web/learning/netacad/index.html">Networking Academy</a></li>	<li><a href="http://www.cisco.com/web/learning/le36/learning_partner_e-learning_connection_tool_launch.html">Partner Education Connection (PEC)</a></li>	<li><a href="http://www.cisco.com/pcgi-bin/marketplace/welcome.pl">Cisco Marketplace</a></li>	<li><a href="https://supportforums.cisco.com/">Cisco Support Community</a></li></ul></div></li></ul><ul class="certification" style="display:none;">	<li><a href="/community/certifications">Certifications</a></li>	<li><span>Entry</span><div style="display:none;"><ul >	<li><span>Entry</span></li>	<li><span>IP Networking (CCENT)</span><div style="display:none;"><ul >	<li><span>IP Networking (CCENT)</span></li>	<li><a href="/community/certifications/ccent">Overview</a></li>	<li><span>ICND1 Exam</span><div style="display:none;"><ul >	<li><span>ICND1 Exam</span></li>	<li><a href="/community/certifications/ccent/icnd1">Exam Overview</a></li>	<li><a href="/community/certifications/ccent/icnd1/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccent/icnd1/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccent/icnd1/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>CCT</span><div style="display:none;"><ul >	<li><span>CCT</span></li>	<li><a href="/community/certifications/cct">Overview</a></li>	<li><span>CCT Routing &amp; Switching</span><div style="display:none;"><ul >	<li><span>CCT Routing &amp; Switching</span></li>	<li><a href="/community/certifications/cct/cct_routing_switching">Overview</a></li>	<li><a href="/community/certifications/cct/cct_routing_switching/syllabus">Syllabus</a></li>	<li><a href="/community/certifications/cct/cct_routing_switching/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/cct/cct_routing_switching/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>CCT Data Center</span><div style="display:none;"><ul >	<li><span>CCT Data Center</span></li>	<li><a href="/community/certifications/cct/cct_data_center">Overview</a></li>	<li><a href="/community/certifications/cct/cct_data_center/syllabus">Syllabus</a></li>	<li><a href="/community/certifications/cct/cct_data_center/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/cct/cct_data_center/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li></ul></div></li>	<li><span>Associate</span><div style="display:none;"><ul >	<li><span>Associate</span></li>	<li><span>Cloud (CCNA)</span><div style="display:none;"><ul >	<li><span>Cloud (CCNA)</span></li>	<li><a href="/community/certifications/ccna-cloud">Overview</a></li>	<li><span>CLDFND Exam</span><div style="display:none;"><ul >	<li><span>CLDFND Exam</span></li>	<li><a href="/community/certifications/ccna-cloud/cldfnd/">Exam Overview</a></li>	<li><a href="/community/certifications/ccna-cloud/cldfnd/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna-cloud/cldfnd/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna-cloud/cldfnd/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>CLDADM Exam</span><div style="display:none;"><ul >	<li><span>CLDADM Exam</span></li>	<li><a href="/community/certifications/ccna-cloud/cldadm/">Exam Overview</a></li>	<li><a href="/community/certifications/ccna-cloud/cldadm/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna-cloud/cldadm/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna-cloud/cldadm/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Collaboration (CCNA)</span><div style="display:none;"><ul >	<li><span>Collaboration (CCNA)</span></li>	<li><a href="/community/certifications/ccna-collaboration">Overview</a></li>	<li><span>CICD Exam</span><div style="display:none;"><ul >	<li><span>CICD Exam</span></li>	<li><a href="/community/certifications/ccna-collaboration/cicd">Exam Overview</a></li>	<li><a href="/community/certifications/ccna-collaboration/cicd/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna-collaboration/cicd/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna-collaboration/cicd/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>CIVND Exam</span><div style="display:none;"><ul >	<li><span>CIVND Exam</span></li>	<li><a href="/community/certifications/ccna-collaboration/civnd">Exam Overview</a></li>	<li><a href="/community/certifications/ccna-collaboration/civnd/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna-collaboration/civnd/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna-collaboration/civnd/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Cyber Ops (CCNA Cyber Ops)</span><div style="display:none;"><ul >	<li><span>Cyber Ops (CCNA Cyber Ops)</span></li>	<li><a href="/community/certifications/ccna-cyber-ops">Overview</a></li>	<li><span>SECFND Exam</span><div style="display:none;"><ul >	<li><span>SECFND Exam</span></li>	<li><a href="/community/certifications/ccna-cyber-ops/secfnd">Exam Overview</a></li>	<li><a href="/community/certifications/ccna-cyber-ops/secfnd/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna-cyber-ops/secfnd/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SECOPS Exam</span><div style="display:none;"><ul >	<li><span>SECOPS Exam</span></li>	<li><a href="/community/certifications/ccna-cyber-ops/secops">Exam Overview</a></li>	<li><a href="/community/certifications/ccna-cyber-ops/secops/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna-cyber-ops/secops/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Data Center (CCNA Data Center)</span><div style="display:none;"><ul >	<li><span>Data Center (CCNA Data Center)</span></li>	<li><a href="/community/certifications/ccna_data_center">Overview</a></li>	<li><span>DCICN Exam</span><div style="display:none;"><ul >	<li><span>DCICN Exam</span></li>	<li><a href="/community/certifications/ccna_data_center/dcicn">Exam Overview</a></li>	<li><a href="/community/certifications/ccna_data_center/dcicn/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna_data_center/dcicn/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna_data_center/dcicn/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>DCICT Exam</span><div style="display:none;"><ul >	<li><span>DCICT Exam</span></li>	<li><a href="/community/certifications/ccna_data_center/dcict">Exam Overview</a></li>	<li><a href="/community/certifications/ccna_data_center/dcict/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna_data_center/dcict/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna_data_center/dcict/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><a href="/community/certifications/ccna_data_center/exam_logic_tool">Exam Logic Tool</a></li></ul></div></li>	<li><span>Design (CCDA)</span><div style="display:none;"><ul >	<li><span>Design (CCDA)</span></li>	<li><a href="/community/certifications/ccda">Overview</a></li>	<li><span>DESGN v3.0 Exam</span><div style="display:none;"><ul >	<li><span>DESGN v3.0 Exam</span></li>	<li><a href="/community/certifications/ccda/desgn">Exam Overview</a></li>	<li><a href="/community/certifications/ccda/desgn/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccda/desgn/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccda/desgn/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><a href="/community/certifications/ccda/exam_logic_tool">Exam Logic Tool</a></li></ul></div></li>	<li><span>Industrial (CCNA)</span><div style="display:none;"><ul >	<li><span>Industrial (CCNA)</span></li>	<li><a href="/community/certifications/ccna-industrial">Overview</a></li>	<li><span>IMINS2 Exam</span><div style="display:none;"><ul >	<li><span>IMINS2 Exam</span></li>	<li><a href="/community/certifications/ccna-industrial/imins2">Exam Overview</a></li>	<li><a href="/community/certifications/ccna-industrial/imins2/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna-industrial/imins2/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna-industrial/imins2/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Routing &amp; Switching (CCNA)</span><div style="display:none;"><ul >	<li><span>Routing &amp; Switching (CCNA)</span></li>	<li><a href="/community/certifications/ccna">Overview</a></li>	<li><span>CCNA Exam</span><div style="display:none;"><ul >	<li><span>CCNA Exam</span></li>	<li><a href="/community/certifications/ccna/ccna-exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccna/ccna-exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna/ccna-exam/study-material">Study Materials</a></li>	<li><a href="/community/learning_center/ccna-routing-switching-training-videos">Training Videos</a></li>	<li><a href="/community/certifications/ccna/ccna-exam/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>ICND1 Exam</span><div style="display:none;"><ul >	<li><span>ICND1 Exam</span></li>	<li><a href="/community/certifications/ccna/icnd1">Exam Overview</a></li>	<li><a href="/community/certifications/ccna/icnd1/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna/icnd1/study-material">Study Materials</a></li>	<li><a href="/community/learning_center/ccna-routing-switching-training-videos">Training Videos</a></li>	<li><a href="/community/certifications/ccna/icnd1/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>ICND2 Exam</span><div style="display:none;"><ul >	<li><span>ICND2 Exam</span></li>	<li><a href="/community/certifications/ccna/icnd2">Exam Overview</a></li>	<li><a href="/community/certifications/ccna/icnd2/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna/icnd2/study-material">Study Materials</a></li>	<li><a href="/community/learning_center/ccna-routing-switching-training-videos">Training Videos</a></li>	<li><a href="/community/certifications/ccna/icnd2/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Security (CCNA Security)</span><div style="display:none;"><ul >	<li><span>Security (CCNA Security)</span></li>	<li><a href="/community/certifications/security_ccna">Overview</a></li>	<li><span>IINS Exam</span><div style="display:none;"><ul >	<li><span>IINS Exam</span></li>	<li><a href="/community/certifications/security_ccna/iins-v3">Exam Overview</a></li>	<li><a href="/community/certifications/security_ccna/iins-v3/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/security_ccna/iins-v3/study-material">Study Materials</a></li>	<li><a href="/community/certifications/security_ccna/iins-v3/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><a href="/community/certifications/security_ccna/exam_logic_tool">Exam Logic Tool</a></li></ul></div></li>	<li><span>Service Provider (CCNA SP)</span><div style="display:none;"><ul >	<li><span>Service Provider (CCNA SP)</span></li>	<li><a href="/community/certifications/ccna_service_provider">Overview</a></li>	<li><span>SPNGN1 Exam</span><div style="display:none;"><ul >	<li><span>SPNGN1 Exam</span></li>	<li><a href="/community/certifications/ccna_service_provider/spngn1_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccna_service_provider/spngn1_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna_service_provider/spngn1_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna_service_provider/spngn1_exam/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SPNGN2 Exam</span><div style="display:none;"><ul >	<li><span>SPNGN2 Exam</span></li>	<li><a href="/community/certifications/ccna_service_provider/spngn2_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccna_service_provider/spngn2_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccna_service_provider/spngn2_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccna_service_provider/spngn2_exam/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><a href="/community/certifications/ccna_service_provider/exam_logic_tool">Exam Logic Tool</a></li></ul></div></li>	<li><span>Wireless (CCNA Wireless)</span><div style="display:none;"><ul >	<li><span>Wireless (CCNA Wireless)</span></li>	<li><a href="/community/certifications/wireless_ccna">Overview</a></li>	<li><span>WIFUND Exam</span><div style="display:none;"><ul >	<li><span>WIFUND Exam</span></li>	<li><a href="/community/certifications/wireless_ccna/wifund">Exam Overview</a></li>	<li><a href="/community/certifications/wireless_ccna/wifund/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/wireless_ccna/wifund/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><a href="/community/certifications/wireless_ccna/exam_logic_tool">Exam Logic Tool</a></li></ul></div></li></ul></div></li>	<li><span>Professional</span><div style="display:none;"><ul >	<li><span>Professional</span></li>	<li><span>Cloud (CCNP)</span><div style="display:none;"><ul >	<li><span>Cloud (CCNP)</span></li>	<li><a href="/community/certifications/ccnp-cloud">Overview</a></li>	<li><span>CLDINF Exam</span><div style="display:none;"><ul >	<li><span>CLDINF Exam</span></li>	<li><a href="/community/certifications/ccnp-cloud/cldinf">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp-cloud/cldinf/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp-cloud/cldinf/study-material">Study Material</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>CLDDES Exam</span><div style="display:none;"><ul >	<li><span>CLDDES Exam</span></li>	<li><a href="/community/certifications/ccnp-cloud/clddes">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp-cloud/clddes/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>CLDAUT Exam</span><div style="display:none;"><ul >	<li><span>CLDAUT Exam</span></li>	<li><a href="/community/certifications/ccnp-cloud/cldaut">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp-cloud/cldaut/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>CLDACI Exam</span><div style="display:none;"><ul >	<li><span>CLDACI Exam</span></li>	<li><a href="/community/certifications/ccnp-cloud/cldaci">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp-cloud/cldaci/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Collaboration (CCNP)</span><div style="display:none;"><ul >	<li><span>Collaboration (CCNP)</span></li>	<li><a href="/community/certifications/ccnp-collaboration">Overview</a></li>	<li><span>CIPTV1 Exam</span><div style="display:none;"><ul >	<li><span>CIPTV1 Exam</span></li>	<li><a href="/community/certifications/ccnp-collaboration/ciptv1-exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ciptv1-exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ciptv1-exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ciptv1-exam/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book Your Exam</a></li></ul></div></li>	<li><span>CIPTV2 Exam</span><div style="display:none;"><ul >	<li><span>CIPTV2 Exam</span></li>	<li><a href="/community/certifications/ccnp-collaboration/ciptv2-exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ciptv2-exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ciptv2-exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ciptv2-exam/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book Your Exam</a></li></ul></div></li>	<li><span>CTCOLLAB Exam</span><div style="display:none;"><ul >	<li><span>CTCOLLAB Exam</span></li>	<li><a href="/community/certifications/ccnp-collaboration/ctcollab-exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ctcollab-exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ctcollab-exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp-collaboration/ctcollab-exam/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book Your Exam</a></li></ul></div></li>	<li><span>CAPPS Exam</span><div style="display:none;"><ul >	<li><span>CAPPS Exam</span></li>	<li><a href="/community/certifications/ccnp-collaboration/capps-exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp-collaboration/capps-exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp-collaboration/capps-exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp-collaboration/capps-exam/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book Your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Data Center (CCNP Data Center)</span><div style="display:none;"><ul >	<li><span>Data Center (CCNP Data Center)</span></li>	<li><a href="/community/certifications/ccnp_data_center">Overview</a></li>	<li><span>DCUCI Exam</span><div style="display:none;"><ul >	<li><span>DCUCI Exam</span></li>	<li><a href="/community/certifications/ccnp_data_center/dcuci">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcuci/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcuci/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcuci/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>DCII Exam</span><div style="display:none;"><ul >	<li><span>DCII Exam</span></li>	<li><a href="/community/certifications/ccnp_data_center/dcii">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcii/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcii/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcii/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>DCVAI Exam</span><div style="display:none;"><ul >	<li><span>DCVAI Exam</span></li>	<li><a href="/community/certifications/ccnp_data_center/dcvai">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcvai/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcvai/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcvai/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>DCID Exam</span><div style="display:none;"><ul >	<li><span>DCID Exam</span></li>	<li><a href="/community/certifications/ccnp_data_center/dcid">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcid/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcid/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcid/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>DCIT Exam</span><div style="display:none;"><ul >	<li><span>DCIT Exam</span></li>	<li><a href="/community/certifications/ccnp_data_center/dcit">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcit/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcit/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_data_center/dcit/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Design (CCDP)</span><div style="display:none;"><ul >	<li><span>Design (CCDP)</span></li>	<li><a href="/community/certifications/ccdp">Overview</a></li>	<li><span>ROUTE Exam</span><div style="display:none;"><ul >	<li><span>ROUTE Exam</span></li>	<li><a href="/community/certifications/ccdp/route">Exam Overview</a></li>	<li><a href="/community/certifications/ccdp/route/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccdp/route/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccdp/route/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SWITCH Exam</span><div style="display:none;"><ul >	<li><span>SWITCH Exam</span></li>	<li><a href="/community/certifications/ccdp/switch">Exam Overview</a></li>	<li><a href="/community/certifications/ccdp/switch/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccdp/switch/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccdp/switch/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>ARCH Exam</span><div style="display:none;"><ul >	<li><span>ARCH Exam</span></li>	<li><a href="/community/certifications/ccdp/arch">Exam Overview</a></li>	<li><a href="/community/certifications/ccdp/arch/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccdp/arch/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccdp/arch/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Routing &amp; Switching (CCNP)</span><div style="display:none;"><ul >	<li><span>Routing &amp; Switching (CCNP)</span></li>	<li><a href="/community/certifications/ccnp">Overview</a></li>	<li><span>ROUTE Exam</span><div style="display:none;"><ul >	<li><span>ROUTE Exam</span></li>	<li><a href="/community/certifications/ccnp/route_v2">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp/route_v2/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp/route_v2/study-material">Study Materials</a></li>	<li><a href="/community/learning_center/ccnp-routing-switching-training-videos">Training Videos</a></li>	<li><a href="/community/certifications/ccnp/route_v2/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SWITCH Exam</span><div style="display:none;"><ul >	<li><span>SWITCH Exam</span></li>	<li><a href="/community/certifications/ccnp/switch_v2">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp/switch_v2/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp/switch_v2/study-material">Study Materials</a></li>	<li><a href="/community/learning_center/ccnp-routing-switching-training-videos">Training Videos</a></li>	<li><a href="/community/certifications/ccnp/switch_v2/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>TSHOOT Exam</span><div style="display:none;"><ul >	<li><span>TSHOOT Exam</span></li>	<li><a href="/community/certifications/ccnp/tshoot_v2">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp/tshoot_v2/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp/tshoot_v2/study-material">Study Materials</a></li>	<li><a href="/community/learning_center/ccnp-routing-switching-training-videos">Training Videos</a></li>	<li><a href="/community/certifications/ccnp/tshoot_v2/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Security (CCNP Security)</span><div style="display:none;"><ul >	<li><span>Security (CCNP Security)</span></li>	<li><a href="/community/certifications/ccnpsecurity">Overview</a></li>	<li><span>SENSS Exam</span><div style="display:none;"><ul >	<li><span>SENSS Exam</span></li>	<li><a href="/community/certifications/ccnpsecurity/senss">Exam Overview</a></li>	<li><a href="/community/certifications/ccnpsecurity/senss/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnpsecurity/senss/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnpsecurity/senss/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SITCS Exam</span><div style="display:none;"><ul >	<li><span>SITCS Exam</span></li>	<li><a href="/community/certifications/ccnpsecurity/sitcs">Exam Overview</a></li>	<li><a href="/community/certifications/ccnpsecurity/sitcs/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnpsecurity/sitcs/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SISAS Exam</span><div style="display:none;"><ul >	<li><span>SISAS Exam</span></li>	<li><a href="/community/certifications/ccnpsecurity/sisas">Exam Overview</a></li>	<li><a href="/community/certifications/ccnpsecurity/sisas/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnpsecurity/sisas/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnpsecurity/sisas/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SIMOS Exam</span><div style="display:none;"><ul >	<li><span>SIMOS Exam</span></li>	<li><a href="/community/certifications/ccnpsecurity/simos">Exam Overview</a></li>	<li><a href="/community/certifications/ccnpsecurity/simos/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnpsecurity/simos/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnpsecurity/simos/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Service Provider (CCNP SP)</span><div style="display:none;"><ul >	<li><span>Service Provider (CCNP SP)</span></li>	<li><a href="/community/certifications/ccnp_service_provider">Overview</a></li>	<li><span>SPROUTE Exam</span><div style="display:none;"><ul >	<li><span>SPROUTE Exam</span></li>	<li><a href="/community/certifications/ccnp_service_provider/sproute">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_service_provider/sproute/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_service_provider/sproute/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_service_provider/sproute/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SPADVROUTE Exam</span><div style="display:none;"><ul >	<li><span>SPADVROUTE Exam</span></li>	<li><a href="/community/certifications/ccnp_service_provider/spadvroute">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spadvroute/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spadvroute/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spadvroute/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SPCORE Exam</span><div style="display:none;"><ul >	<li><span>SPCORE Exam</span></li>	<li><a href="/community/certifications/ccnp_service_provider/spcore">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spcore/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spcore/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spcore/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>SPEDGE Exam</span><div style="display:none;"><ul >	<li><span>SPEDGE Exam</span></li>	<li><a href="/community/certifications/ccnp_service_provider/spedge">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spedge/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spedge/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccnp_service_provider/spedge/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>Wireless (CCNP Wireless)</span><div style="display:none;"><ul >	<li><span>Wireless (CCNP Wireless)</span></li>	<li><a href="/community/certifications/ccnp_wireless">Overview</a></li>	<li><span>WISECURE Exam</span><div style="display:none;"><ul >	<li><span>WISECURE Exam</span></li>	<li><a href="/community/certifications/ccnp_wireless/wisecure">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_wireless/wisecure/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_wireless/wisecure/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>WIDESIGN Exam</span><div style="display:none;"><ul >	<li><span>WIDESIGN Exam</span></li>	<li><a href="/community/certifications/ccnp_wireless/widesign">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_wireless/widesign/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_wireless/widesign/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>WIDEPLOY Exam</span><div style="display:none;"><ul >	<li><span>WIDEPLOY Exam</span></li>	<li><a href="/community/certifications/ccnp_wireless/wideploy">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_wireless/wideploy/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_wireless/wideploy/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>WITSHOOT Exam</span><div style="display:none;"><ul >	<li><span>WITSHOOT Exam</span></li>	<li><a href="/community/certifications/ccnp_wireless/witshoot">Exam Overview</a></li>	<li><a href="/community/certifications/ccnp_wireless/witshoot/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccnp_wireless/witshoot/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li></ul></div></li>	<li><span>Expert</span><div style="display:none;"><ul >	<li><span>Expert</span></li>	<li><span>CCDE Design Expert</span><div style="display:none;"><ul >	<li><span>CCDE Design Expert</span></li>	<li><a href="/community/certifications/ccde">Overview</a></li>	<li><span>Written Exam</span><div style="display:none;"><ul >	<li><span>Written Exam</span></li>	<li><a href="/community/certifications/ccde/written_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccde/written_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccde/written_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>Lab Exam</span><div style="display:none;"><ul >	<li><span>Lab Exam</span></li>	<li><a href="/community/certifications/ccde/practical_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccde/practical_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccde/practical_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccde/practical_exam/practice">Practice</a></li>	<li><a href="/community/certifications/ccde-book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>CCIE Collaboration</span><div style="display:none;"><ul >	<li><span>CCIE Collaboration</span></li>	<li><a href="/community/certifications/ccie_collaboration">Overview</a></li>	<li><span>Written Exam</span><div style="display:none;"><ul >	<li><span>Written Exam</span></li>	<li><a href="/community/certifications/ccie_collaboration/written_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_collaboration/written_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_collaboration/written_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>Lab Exam</span><div style="display:none;"><ul >	<li><span>Lab Exam</span></li>	<li><a href="/community/certifications/ccie_collaboration/lab_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_collaboration/lab_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_collaboration/lab_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie_collaboration/lab_exam/practice">Practice</a></li>	<li><a href="/community/certifications/ccie-book-your-exam/">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>CCIE Data Center</span><div style="display:none;"><ul >	<li><span>CCIE Data Center</span></li>	<li><a href="/community/certifications/ccie_data_center">Overview</a></li>	<li><span>Written Exam</span><div style="display:none;"><ul >	<li><span>Written Exam</span></li>	<li><a href="/community/certifications/ccie_data_center/written_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_data_center/written_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_data_center/written_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>Lab Exam</span><div style="display:none;"><ul >	<li><span>Lab Exam</span></li>	<li><a href="/community/certifications/ccie_data_center/lab_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_data_center/lab_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_data_center/lab_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie_data_center/lab_exam/practice">Practice</a></li>	<li><a href="/community/certifications/ccie-book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>CCIE Routing &amp; Switching</span><div style="display:none;"><ul >	<li><span>CCIE Routing &amp; Switching</span></li>	<li><a href="/community/certifications/ccie_routing_switching">Overview</a></li>	<li><span>Written Exam</span><div style="display:none;"><ul >	<li><span>Written Exam</span></li>	<li><a href="/community/certifications/ccie_routing_switching/written_exam_v5">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_routing_switching/written_exam_v5/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_routing_switching/written_exam_v5/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie_routing_switching/written_exam_v5/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>Lab Exam</span><div style="display:none;"><ul >	<li><span>Lab Exam</span></li>	<li><a href="/community/certifications/ccie_routing_switching/lab_exam_v5">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_routing_switching/lab_exam_v5/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_routing_switching/lab_exam_v5/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie_routing_switching/lab_exam_v5/practice">Practice</a></li>	<li><a href="/community/certifications/ccie-book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>CCIE Security</span><div style="display:none;"><ul >	<li><span>CCIE Security</span></li>	<li><a href="/community/certifications/ccie_security">Overview</a></li>	<li><span>Written Exam</span><div style="display:none;"><ul >	<li><span>Written Exam</span></li>	<li><a href="/community/certifications/ccie_security/written_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_security/written_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_security/written_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie_security/written_exam/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>Lab Exam</span><div style="display:none;"><ul >	<li><span>Lab Exam</span></li>	<li><a href="/community/certifications/ccie_security/lab_exam">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_security/lab_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_security/lab_exam/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie-book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>CCIE Service Provider</span><div style="display:none;"><ul >	<li><span>CCIE Service Provider</span></li>	<li><a href="/community/certifications/ccie_service_provider">Overview</a></li>	<li><span>Written Exam</span><div style="display:none;"><ul >	<li><span>Written Exam</span></li>	<li><a href="/community/certifications/ccie_service_provider/written_exam_v4">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_service_provider/written_exam_v4/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_service_provider/written_exam_v4/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie_service_provider/written_exam_v4/practice">Practice</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>Lab Exam</span><div style="display:none;"><ul >	<li><span>Lab Exam</span></li>	<li><a href="/community/certifications/ccie_service_provider/lab_exam_v4">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_service_provider/lab_exam_v4/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_service_provider/lab_exam_v4/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie_service_provider/lab_exam_v4/practice">Practice</a></li>	<li><a href="/community/certifications/ccie-book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li>	<li><span>CCIE Wireless</span><div style="display:none;"><ul >	<li><span>CCIE Wireless</span></li>	<li><a href="/community/certifications/ccie_wireless">Overview</a></li>	<li><span>Written Exam</span><div style="display:none;"><ul >	<li><span>Written Exam</span></li>	<li><a href="/community/certifications/ccie_wireless/written-exam-v3">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_wireless/written-exam-v3/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_wireless/written-exam-v3/study-material">Study Materials</a></li>	<li><a href="/community/certifications/book-your-exam">Book your Exam</a></li></ul></div></li>	<li><span>Lab Exam</span><div style="display:none;"><ul >	<li><span>Lab Exam</span></li>	<li><a href="/community/certifications/ccie_wireless/lab-exam-v3">Exam Overview</a></li>	<li><a href="/community/certifications/ccie_wireless/lab-exam-v3/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/ccie_wireless/lab-exam-v3/study-material">Study Materials</a></li>	<li><a href="/community/certifications/ccie-book-your-exam">Book your Exam</a></li></ul></div></li></ul></div></li></ul></div></li>	<li><span>Architect</span><div style="display:none;"><ul >	<li><span>Architect</span></li>	<li><span>Cisco Certified Architect</span><div style="display:none;"><ul >	<li><span>Cisco Certified Architect</span></li>	<li><a href="/community/certifications/cisco_certified_architect">Overview</a></li>	<li><a href="/community/certifications/cisco_certified_architect/syllabus">Syllabus</a></li>	<li><a href="/community/certifications/cisco_certified_architect/data_sheets_and_literature">Data Sheets and Literature</a></li>	<li><span>Board Exam</span><div style="display:none;"><ul >	<li><span>Board Exam</span></li>	<li><a href="/community/certifications/cisco_certified_architect/board_exam">Exam Overview</a></li>	<li><a href="/community/certifications/cisco_certified_architect/board_exam/exam-topics">Exam Topics</a></li>	<li><a href="/community/certifications/cisco_certified_architect/board_exam/application">Application &amp; Board Exam</a></li>	<li><a href="/community/certifications/cisco_certified_architect/board_exam/exam-dates">Exam Dates</a></li></ul></div></li></ul></div></li></ul></div></li>	<li><span>Technical Specialists</span><div style="display:none;"><ul >	<li><span>Technical Specialists</span></li>	<li><span>Collaboration</span><div style="display:none;"><ul >	<li><span>Collaboration</span></li>	<li><a href="/community/certifications/collaboration">Overview</a></li>	<li><span>Cisco TelePresence Solutions</span><div style="display:none;"><ul >	<li><span>Cisco TelePresence Solutions</span></li>	<li><a href="/community/certifications/collaboration/cisco_telepresence_solutions">Overview</a></li>	<li><a href="/community/certifications/collaboration/cisco_telepresence_solutions/ix5k-exam">IX5K Exam</a></li></ul></div></li>	<li><span>Cisco Unified Contact Center Enterprise Specialist</span><div style="display:none;"><ul >	<li><span>Cisco Unified Contact Center Enterprise Specialist</span></li>	<li><a href="/community/certifications/collaboration/contact-center-enterprise/">Overview</a></li>	<li><a href="/community/certifications/collaboration/contact-center-enterprise/ucced-exam">UCCED Exam</a></li>	<li><a href="/community/certifications/collaboration/contact-center-enterprise/ucceis-exam">UCCEIS Exam</a></li></ul></div></li>	<li><a href="/community/certifications/collaboration/video_network_specialist">Cisco Video Network Specialist</a></li></ul></div></li>	<li><span>Data Center</span><div style="display:none;"><ul >	<li><span>Data Center</span></li>	<li><a href="/community/certifications/data_center">Overview</a></li>	<li><a href="/community/certifications/data_center/unified_fabric_design">Unified Fabric Design</a></li>	<li><a href="/community/certifications/data_center/unified_fabric_support">Unified Fabric Support</a></li>	<li><span>Cisco and NetApp FlexPod Design Specialist</span><div style="display:none;"><ul >	<li><span>Cisco and NetApp FlexPod Design Specialist</span></li>	<li><a href="/community/certifications/data_center/flexpod-specialist">Overview</a></li>	<li><a href="/community/certifications/data_center/flexpod-specialist/fpdesign-exam">FPDESIGN Exam</a></li></ul></div></li>	<li><span>Cisco and NetApp FlexPod Implementation and Administration Specialist</span><div style="display:none;"><ul >	<li><span>Cisco and NetApp FlexPod Implementation and Administration Specialist</span></li>	<li><a href="/community/certifications/data_center/flexpod-administration-specialist">Overview</a></li>	<li><a href="/community/certifications/data_center/flexpod-administration-specialist/fpimpadm-exam">FPIMPADM Exam</a></li></ul></div></li></ul></div></li>	<li><span>Internet of Things</span><div style="display:none;"><ul >	<li><span>Internet of Things</span></li>	<li><a href="/community/certifications/iot">Overview</a></li>	<li><span>Industrial Networking</span><div style="display:none;"><ul >	<li><span>Industrial Networking</span></li>	<li><a href="/community/certifications/iot/industrial-networking">Overview</a></li>	<li><a href="/community/certifications/iot/industrial-networking/imins-exam">IMINS Exam</a></li></ul></div></li></ul></div></li>	<li><span>Network Programmability</span><div style="display:none;"><ul >	<li><span>Network Programmability</span></li>	<li><a href="/community/certifications/network-programmability">Overview</a></li>	<li><span>Network Programmability Developer</span><div style="display:none;"><ul >	<li><span>Network Programmability Developer</span></li>	<li><a href="/community/certifications/network-programmability/network-application-developer">Overview</a></li>	<li><a href="/community/certifications/network-programmability/network-application-developer/npdev-exam">NPDEV Exam</a></li></ul></div></li>	<li><span>Network Programmability Design and Implementation Specialist</span><div style="display:none;"><ul >	<li><span>Network Programmability Design and Implementation Specialist</span></li>	<li><a href="/community/certifications/network-programmability/design-and-implementation">Overview</a></li>	<li><a href="/community/certifications/network-programmability/design-and-implementation/npdesi-exam">NPDESI Exam</a></li></ul></div></li></ul></div></li>	<li><span>Operating System Software</span><div style="display:none;"><ul >	<li><span>Operating System Software</span></li>	<li><a href="/community/certifications/operating_system_software">Overview</a></li>	<li><span>IOS XR Specialist</span><div style="display:none;"><ul >	<li><span>IOS XR Specialist</span></li>	<li><a href="/community/certifications/operating_system_software/ios_xr_specialist">Overview</a></li>	<li><a href="/community/certifications/operating_system_software/ios_xr_specialist/imtxr_written_exam">IMTXR Written Exam</a></li></ul></div></li></ul></div></li>	<li><span>Security</span><div style="display:none;"><ul >	<li><span>Security</span></li>	<li><a href="/community/certifications/security">Overview</a></li>	<li><span>Cybersecurity Specialist</span><div style="display:none;"><ul >	<li><span>Cybersecurity Specialist</span></li>	<li><a href="/community/certifications/security/cybersecurity">Overview</a></li>	<li><a href="/community/certifications/security/cybersecurity/scyber_exam">SCYBER Exam</a></li></ul></div></li></ul></div></li>	<li><span>Service Provider</span><div style="display:none;"><ul >	<li><span>Service Provider</span></li>	<li><a href="/community/certifications/service-provider">Overview</a></li>	<li><span>SP Mobility CDMA to LTE Specialist</span><div style="display:none;"><ul >	<li><span>SP Mobility CDMA to LTE Specialist</span></li>	<li><a href="/community/certifications/service-provider/mobility-cdma-lte-specialist">Overview</a></li>	<li><a href="/community/certifications/service-provider/mobility-cdma-lte-specialist/datasheets-literature">Data Sheets and Literature</a></li>	<li><a href="/community/certifications/service-provider/mobility-cdma-lte-specialist/spcdma-exam">SPCDMA Exam</a></li>	<li><a href="/community/certifications/service-provider/mobility-cdma-lte-specialist/splte-exam">SPLTE Exam</a></li></ul></div></li>	<li><span>SP Mobility UMTS to LTE Specialist</span><div style="display:none;"><ul >	<li><span>SP Mobility UMTS to LTE Specialist</span></li>	<li><a href="/community/certifications/service-provider/mobility-umts-lte-specialist">Overview</a></li>	<li><a href="/community/certifications/service-provider/mobility-umts-lte-specialist/datasheets-literature">Data Sheets and Literature</a></li>	<li><a href="/community/certifications/service-provider/mobility-umts-lte-specialist/spumts-exam">SPUMTS Exam</a></li>	<li><a href="/community/certifications/service-provider/mobility-umts-lte-specialist/splte-exam">SPLTE Exam</a></li></ul></div></li></ul></div></li></ul></div></li>	<li><span>Digital Transformation Specialists</span><div style="display:none;"><ul >	<li><span>Digital Transformation Specialists</span></li>	<li><span>Business</span><div style="display:none;"><ul >	<li><span>Business</span></li>	<li><a href="/community/certifications/business">Overview</a></li>	<li><span>IT Business Specialist</span><div style="display:none;"><ul >	<li><span>IT Business Specialist</span></li>	<li><a href="/community/certifications/business/it-business-specialists/">Overview</a></li>	<li><a href="/community/certifications/business/it-business-specialists/btbbss-exam">BTBBSS Exam</a></li></ul></div></li>	<li><span>Cisco Business IT Roadmap Specialist</span><div style="display:none;"><ul >	<li><span>Cisco Business IT Roadmap Specialist</span></li>	<li><a href="/community/certifications/business/cisco-business-it-roadmap-specialist">Overview</a></li>	<li><a href="/community/certifications/business/cisco-business-it-roadmap-specialist/btroad">BTROAD Exam</a></li></ul></div></li>	<li><span>Cisco Business Architecture Analyst</span><div style="display:none;"><ul >	<li><span>Cisco Business Architecture Analyst</span></li>	<li><a href="/community/certifications/business/cisco-business-architecture-analyst">Overview</a></li>	<li><a href="/community/certifications/business/cisco-business-architecture-analyst/dtbaa">DTBAA Exam</a></li></ul></div></li>	<li><span>Cisco Business Architecture Specialist</span><div style="display:none;"><ul >	<li><span>Cisco Business Architecture Specialist</span></li>	<li><a href="/community/certifications/business/cisco-business-architecture">Overview</a></li>	<li><a href="/community/certifications/business/cisco-business-architecture/dtbas">DTBAS Exam</a></li></ul></div></li>	<li><span>Cisco Business Architecture Practitioner</span><div style="display:none;"><ul >	<li><span>Cisco Business Architecture Practitioner</span></li>	<li><a href="/community/certifications/business/cisco-business-architecture-practitioner">Overview</a></li>	<li><a href="/community/certifications/business/cisco-business-architecture-practitioner/dtbad">DTBAD Exam</a></li></ul></div></li>	<li><span>Business Value Specialist</span><div style="display:none;"><ul >	<li><span>Business Value Specialist</span></li>	<li><a href="/community/certifications/business/cisco-business-value-specialist">Overview</a></li>	<li><a href="/community/certifications/business/cisco-business-value-specialist/outcomes">OUTCOMES Exam</a></li>	<li><a href="/community/certifications/business/cisco-business-value-specialist/btasbva-v3">BTASBVA v3.0 Exam</a></li></ul></div></li>	<li><span>Business Value Practitioner</span><div style="display:none;"><ul >	<li><span>Business Value Practitioner</span></li>	<li><a href="/community/certifications/business/cisco-business-value-practitioner">Overview</a></li>	<li><a href="/community/certifications/business/cisco-business-value-practitioner/bteabvd-v2">BTEABVD v2.0 Exam</a></li></ul></div></li>	<li><span>Cisco Business Value Analyst</span><div style="display:none;"><ul >	<li><span>Cisco Business Value Analyst</span></li>	<li><a href="/community/certifications/business/cisco-business-value-analyst">Overview</a></li>	<li><a href="/community/certifications/business/cisco-business-value-analyst/outcomes">OUTCOMES Exam</a></li></ul></div></li></ul></div></li>	<li><span>Customer Success</span><div style="display:none;"><ul >	<li><span>Customer Success</span></li>	<li><a href="/community/certifications/customer-success">Overview</a></li>	<li><span>Cisco Customer Success Manager Specialist</span><div style="display:none;"><ul >	<li><span>Cisco Customer Success Manager Specialist</span></li>	<li><a href="/community/certifications/customer-success/customer-success-manager">Overview</a></li>	<li><a href="/community/certifications/customer-success/customer-success-manager/dtcsm">DTCSM Exam</a></li></ul></div></li></ul></div></li></ul></div></li>	<li><span>Policies and Tools</span><div style="display:none;"><ul >	<li><span>Policies, Reference &amp; Tools</span></li>	<li><a href="/community/certifications/policies_reference_tools">Overview</a></li>	<li><a href="/community/certifications/policies_reference_tools/earned-it-videos">Earned It! Videos</a></li>	<li><a href="/community/certifications/policies_reference_tools/recertification">Recertification</a></li>	<li><a href="/community/certifications/cisco-continuing-education-program">Cisco Continuing Education Program</a></li>	<li><a href="/community/certifications/policies_reference_tools/exam_information">Exam Information</a></li>	<li><a href="/docs/DOC-27345">Certification Tracking System How-To Videos</a></li>	<li><a href="/community/certifications/policies_reference_tools/policies">Policies</a></li>	<li><a href="/community/certifications/policies_reference_tools/tools">Tools</a></li></ul></div></li></ul><ul style="display:none;">	<li><a href="/community/learning_center/featured-groups">Community</a></li>	<li><span>Entry</span><div style="display:none;"><ul >	<li><span>Entry</span></li>	<li><a href="/groups/ccent-ccna-routing-switching-study-group">CCENT/CCNA R&amp;S Study Group</a></li></ul></div></li>	<li><span>Associate</span><div style="display:none;"><ul >	<li><span>Associate</span></li>	<li><a href="/groups/ccna-cloud-study-group">CCNA Cloud Study Group</a></li>	<li><a href="/groups/ccna-collaboration-study-group">CCNA Collaboration Study Group</a></li>	<li><a href="/groups/cyber-security-study-group">CCNA Cyber Ops Study Group</a></li>	<li><a href="/groups/ccna-data-center-study-group">CCNA Data Center Study Group</a></li>	<li><a href="/groups/ccda-study-group">CCDA Study Group</a></li>	<li><a href="/groups/ccna-industrial-study-group">CCNA Industrial Study Group</a></li>	<li><a href="/groups/ccent-ccna-routing-switching-study-group">CCENT/CCNA R&amp;S Study Group</a></li>	<li><a href="/groups/ccna-security-study-group">CCNA Security Study Group</a></li>	<li><a href="/groups/ccna-sp-study-group">CCNA SP Study Group</a></li>	<li><a href="/groups/ccna-wireless-study-group">CCNA Wireless Study Group</a></li></ul></div></li>	<li><span>Professional</span><div style="display:none;"><ul >	<li><span>Professional</span></li>	<li><a href="/groups/ccnp-cloud-study-group">CCNP Cloud Study Group</a></li>	<li><a href="/groups/ccnp-collaboration-study-group">CCNP Collaboration Study Group</a></li>	<li><a href="/groups/ccnp-data-center-study-group">CCNP Data Center Study Group</a></li>	<li><a href="/groups/ccdp-study-group">CCDP Study Group</a></li>	<li><a href="/groups/ccnp-study-group">CCNP R&amp;S Study Group</a></li>	<li><a href="/groups/ccnp-security-study-group">CCNP Security Study Group</a></li>	<li><a href="/groups/ccnp-sp-study-group">CCNP SP Study Group</a></li>	<li><a href="/groups/ccnp-wireless-study-group">CCNP Wireless Study Group</a></li></ul></div></li>	<li><span>Expert</span><div style="display:none;"><ul >	<li><span>Expert</span></li>	<li><a href="/groups/ccie-collaboration-study-group">CCIE Collaboration Study Group</a></li>	<li><a href="/groups/ccie-data-center-study-group">CCIE Data Center Study Group</a></li>	<li><a href="/groups/ccde-study-group">CCDE Study Group</a></li>	<li><a href="/groups/ccie-routing-and-switching-study-group">CCIE Routing and Switching Study Group</a></li>	<li><a href="/groups/ccie-security-study-group">CCIE Security Study Group</a></li>	<li><a href="/groups/ccie-sp-study-group">CCIE SP Study Group</a></li>	<li><a href="/groups/ccie-wireless-study-group">CCIE Wireless Study Group</a></li></ul></div></li>	<li><span>Specialist</span><div style="display:none;"><ul >	<li><span>Specialist</span></li>	<li><a href="/groups/network-programmability-study-group">Network Programmability Study Group</a></li></ul></div></li>	<li><span>All Community Content</span><div style="display:none;"><ul >	<li><span>All Community Content</span></li>	<li><a href="/content?filterID=all~objecttype~objecttype[thread]">All Discussions</a></li>	<li><a href="/community/dna">Digital Network Architecture (DNA)</a></li>	<li><a href="/groups/virl">VIRL Users Group</a></li>	<li><a href="/community/connections/learningpartners">Learning Lounges</a></li>	<li><a href="/groups/join-women-in-networking">Join Women in Networking</a></li>	<li><a href="/community/networking_academy">Networking Academy</a></li>	<li><a href="/groups/cll">Cisco Learning Labs</a></li>	<li><a href="/groups/nepal-users-group">Nepal Users Group</a></li></ul></div></li></ul><ul style="display:none;">	<li><a href="/community/learning_center">Learning Center</a></li>	<li><span>Technology Library</span><div style="display:none;"><ul >	<li><span>Technology Library</span></li>	<li><a href="/community/learning_center/aci-training-videos">ACI Training Resources</a></li>	<li><a href="/community/learning_center/ccde-training-videos">CCDE Training Videos</a></li>	<li><a href="/community/learning_center/practical-network-design-fundamentals">CCDP Training Videos</a></li>	<li><a href="/community/learning_center/ccie_datacenter_tech_seminars">CCIE Data Center Tech Seminars</a></li>	<li><a href="/community/learning_center/ccie-rs-tech-seminars">CCIE R&amp;S Tech Seminars</a></li>	<li><a href="/community/learning_center/ccie-sp-training-videos">CCIE SP Training Videos</a></li>	<li><a href="/community/learning_center/ccie-wireless-training-videos">CCIE Wireless Training Videos</a></li>	<li><a href="/community/learning_center/ccna_rs_study_sessions_live">CCNA R&amp;S Study Sessions</a></li>	<li><a href="/community/learning_center/ccna-security-training-videos">CCNA Security Training Videos</a></li>	<li><a href="/community/learning_center/ccnp-data-center-training-videos">CCNP Data Center Training Videos</a></li>	<li><a href="/community/learning_center/ccnp-security-tech-seminars">CCNP Security Tech Seminars</a></li>	<li><a href="/community/learning_center/cisco-answers-it">Cisco Answers IT Microlearning</a></li>	<li><a href="/community/learning_center/sourcefire-training-videos">Cisco NGIPS Training Videos</a></li>	<li><a href="/community/learning_center/meet_authors">Cisco Press Authors Live</a></li>	<li><a href="/community/learning_center/cloudcenter-training-videos">CloudCenter Training Videos</a></li>	<li><a href="/community/learning_center/collaboration-training-videos">Collaboration Training Videos</a></li>	<li><a href="/community/learning_center/data-center-training-videos">Data Center Training Videos</a></li>	<li><a href="/community/learning_center/it_training_videos">IT Training Videos &amp; Seminars</a></li>	<li><a href="/community/learning_center/member_led_study_sessions_live">Member-Led Live Study Sessions</a></li>	<li><a href="/community/learning_center/sdn_recorded_seminars">SDN Tech Seminars</a></li>	<li><a href="/community/learning_center/virl-training-videos">VIRL Training Videos</a></li></ul></div></li>	<li><span>Self-Study Resources</span><div style="display:none;"><ul >	<li><span>Self-Study Resources</span></li>	<li><a href="/community/learning_center/study_learn_content">Study/Learn Master List</a></li>	<li><a href="/community/learning_center/certification_exam_topics">Exam Topics Master List</a></li>	<li><a href="/community/learning_center/featured-groups">Study Groups Master List</a></li>	<li><a href="/community/learning_center/featured-blogs">Featured Blogs Master List</a></li></ul></div></li>	<li><span>Cisco Self-Study Products</span><div style="display:none;"><ul >	<li><span>Cisco Self-Study Products</span></li>	<li><a href="/community/learning_center/certification-practice-exams">Certification Practice Exams</a></li>	<li><a href="/community/learning_center/cisco-learning-labs">Cisco Learning Labs</a></li>	<li><a href="/docs/DOC-29644">Packet Tracer &amp; Alternative Lab Solutions</a></li></ul></div></li>	<li><span>Technology Training</span><div style="display:none;"><ul >	<li><span>Technology Training</span></li>	<li><a href="/community/certifications/data-analytics">Data and Analytics</a></li>	<li><a href="/community/certifications/digital-network-architecture">Digital Network Architecture</a></li>	<li><a href="/community/network-automation-analytics-and-virtualization">Network Automation, Analytics, and Virtualization</a></li></ul></div></li>	<li><span>Additional Resources</span><div style="display:none;"><ul >	<li><span>Additional Resources</span></li>	<li><a href="/community/learning_center/self_assessments">Assess Your Skills</a></li>	<li><a href="/community/learning_center/games">Games &amp; Mobile Apps</a></li>	<li><a href="/community/learning_center/cisco_exam_preparation">Exam Preparation - Study for Results</a></li>	<li><span>TechWiseTV</span><div style="display:none;"><ul >	<li><span>TechWiseTV</span></li>	<li><a href="/community/learning_center/techwisetv">Overview</a></li>	<li><a href="/community/learning_center/techwisetv/networking-fundamentals">Fundamentals</a></li></ul></div></li>	<li><span>Cisco on Cisco Showcase</span><div style="display:none;"><ul >	<li><span>Cisco on Cisco Showcase</span></li>	<li><a href="/community/learning_center/cisco_on_cisco_showcase">Overview</a></li>	<li><a href="/community/learning_center/cisco_on_cisco_showcase/case_studies">Current Case Studies</a></li>	<li><a href="/community/learning_center/cisco_on_cisco_showcase/archive">Archive</a></li></ul></div></li>	<li><span>Cisco Expert-Level Training</span><div style="display:none;"><ul >	<li><span>Cisco Expert-Level Training</span></li>	<li><a href="/community/learning_center/expert-level-training">Overview</a></li>	<li><span>For CCIE Routing and Switching</span><div style="display:none;"><ul >	<li><span>For CCIE Routing and Switching</span></li>	<li><a href="/community/learning_center/expert-level-training/ccie-routing-switching">Overview</a></li>	<li><a href="/community/learning_center/expert-level-training/ccie-routing-switching/learning-partners">Authorized Learning Partners</a></li></ul></div></li>	<li><span>For CCIE Collaboration</span><div style="display:none;"><ul >	<li><span>For CCIE Collaboration</span></li>	<li><a href="/community/learning_center/expert-level-training/ccie-collaboration">Overview</a></li>	<li><a href="/community/learning_center/expert-level-training/ccie-collaboration/learning-partners">Authorized Learning Partners</a></li></ul></div></li></ul></div></li>	<li><a href="/community/learning_center/team_wikis">Team Wiki Spaces</a></li></ul></div></li></ul><ul style="display:none;">	<li><a href="/community/it_careers">IT Careers</a></li>	<li><span>Choose Your Background</span><div style="display:none;"><ul >	<li><span>Choose Your Background</span></li>	<li><a href="/community/it_careers/choose_your_background">Overview</a></li>	<li><a href="/community/it_careers/student">Student</a></li>	<li><a href="/community/it_careers/military">Military</a></li>	<li><a href="/community/it_careers/start_career">Career Changer</a></li>	<li><a href="/community/it_careers/working_it_professionals">Working IT Professionals</a></li>	<li><a href="/community/it_careers/bicsi">BICSI Certified</a></li>	<li><a href="/community/it_careers/comptia">CompTIA</a></li>	<li><a href="/community/it_careers/nextlevel">Next Level</a></li></ul></div></li>	<li><span>Create Your IT Future</span><div style="display:none;"><ul >	<li><span>Create Your IT Future</span></li>	<li><a href="/community/it_careers/sdn">Workforce of the Future</a></li>	<li><a href="/community/it_careers/get_data_center_certified">Get Data Center Certified</a></li>	<li><a href="/community/it_careers/it_success_stories">IT Success Stories</a></li>	<li><a href="/community/it_careers/it_career_profiles">IT Career Profiles</a></li>	<li><span>Digital Network Architecture (DNA)</span><div style="display:none;"><ul >	<li><span>Digital Network Architecture (DNA)</span></li>	<li><a href="/community/dna">Overview</a></li>	<li><a href="/community/dna/what-does-cisco-dna-mean-to-you">What does Cisco Digital Network Architecture mean to you?</a></li></ul></div></li>	<li><a href="/community/it_careers/exciting_jobs">Exciting Jobs Using Cisco Technology</a></li>	<li><a href="https://learningnetwork.cisco.com/docs/DOC-30069">Cisco TAC Job Openings</a></li></ul></div></li>	<li><span>Create Your IT Career</span><div style="display:none;"><ul >	<li><span>Create Your IT Career</span></li>	<li><a href="/community/it_careers/create-your-career-toolkit-webinars">Create Your Career Toolkit &amp; Webinars</a></li>	<li><a href="/community/it_careers/internet-of-things-webinar-series">Internet of Things Webinar Series</a></li></ul></div></li>	<li><span>Women in Networking</span><div style="display:none;"><ul >	<li><span>Women in Networking</span></li>	<li><a href="https://learningnetwork.cisco.com/groups/join-women-in-networking">Overview</a></li>	<li><a href="https://learningnetwork.cisco.com/docs/DOC-26334">WIN Profiles</a></li>	<li><a href="https://learningnetwork.cisco.com/groups/join-women-in-networking/blog">WIN Blogs</a></li>	<li><a href="https://learningnetwork.cisco.com/docs/DOC-26860">WIN Talk Series</a></li>	<li><a href="https://learningnetwork.cisco.com/docs/DOC-32196">WIN Events and Videos</a></li></ul></div></li></ul><ul style="display:none;"></ul></div></div>	<script src="/themes/cln/resources/jwplayer7/jwplayer.js" type="text/javascript"></script><script src="/themes/cln/scripts/jwplayer_utils.js?v=67b28f41528d81dcdfc43dfa0c4b615efd443acd2e09777f" type="text/javascript"></script><script src="/themes/cln/scripts/BrightcoveExperiences.js" type="text/javascript"></script></header></div><section id="j-main" class="clearfix"><div id="jive-body" class="clearfix">
+<div id="jive-breadcrumb"><span><a href="/welcome">Home</a> &gt; <a href="/community/certifications">Certifications</a> &gt; <a href="/community/certifications/security_ccna">Security (CCNA Security)</a> &gt;                 <a class="jive-breadcrumb-last" href="/community/certifications/security_ccna/content?filterID=contentstatus[published]~objecttype~objecttype[document]">Documents</a>
+</span><script type="text/javascript">$j( '#jive-breadcrumb > span a:last' ).replaceWith( function( _, content ) { return '<span>' + content + '</span>'; } );</script></div>      
+
+    <form id="documentRestoreForm" method="post" action='/docs/DOC-15652/restore'>
+        <input type="hidden" name="version" value="41" />
+        <input type="hidden" name="jive.token.name" value="document.restore.DOC-15652"/>
+        <input type="hidden" name="document.restore.DOC-15652" value="[placeholder]"/>
+    </form>
+
+    <form id="documentPublishForm" method="post" action='/doc-publish.jspa'>
+        <input type="hidden" name="jive.token.name" value="document.publish.DOC-15652"/>
+        <input type="hidden" name="document.publish.DOC-15652" value="[placeholder]"/>
+        <input type="hidden" name="document" value="DOC-15652" />
+    </form>
+
+
+    <!-- BEGIN main body -->
+    <div class="jive-wiki-post-moderating jive-content-header-moderating">
+        <span class="jive-icon-med jive-icon-moderation"></span>Currently Being Moderated
+    </div>
+    <div id="jive-body-main" class="j-layout j-layout-ls clearfix">
+        <div class="j-column-wrap-l">
+            <div class="j-column j-column-l lg-margin">
+
+            	<!--BEGIN custom sharing-->
+					    <script type="text/javascript">
+							$j(document).ready(function () {
+								socialSharing();
+							});
+						</script>
+						<div class="custom-sharing"></div>
+			    <!--END custom sharing-->
+
+
+                <div id="object-follow-notify" class="jive-info-box" style="display:none" aria-live="polite" aria-atomic="true"></div>
+
+                <div id="content-featured-notify" class="jive-info-box" style="display:none" aria-live="polite" aria-atomic="true"></div>
+
+
+
+
+
+
+
+
+
+<!-- BEGIN document -->
+<ul class="js-outcome-badge-container js-outcome-badge-container-top j-outcome-badge-container-top j-outcome-badge-container js-ed-102-15652 j-outcome-summary-container clearfix" data-object-type="102" data-object-id="15652"aria-label="Outcome badges"data-allowed-outcome-types="&quot;List(\&quot;finalized\&quot;, \&quot;outdated\&quot;, \&quot;official\&quot;)&quot;"aria-live="polite"></ul>
+
+<div class="jive-content clearfix doc-page js-tlo js-ed-102-15652" role="main" aria-labeledby="main-doc-header" data-object-type="102" data-object-id="15652">
+    <header>
+        <h1><span role='img' title='Document' class="jive-icon-big jive-icon-document"></span>CCNA Security: SSL VPNs</h1>
+        <div class="j-byline font-color-meta">
+
+
+ 
+Created by <a href="/people/dipancha"
+data-externalId=""
+data-username="dipancha"
+data-avatarId="-1"
+id="jive-23457517733779281141078"
+data-userId="234575"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>Divya Panchal</a> on 12/07/2012 12:27 PM. Last modified by <a href="/people/npfeiffe"
+data-externalId=""
+data-username="npfeiffe"
+data-avatarId="9760"
+id="jive-59574317733779282567852"
+data-userId="595743"
+data-presence="null"
+class="jiveTT-hover-user jive-username-link"
+>Nicole Pfeiffer</a> on 14/03/2014 1:56 PM.
+
+        </div>
+
+<ul class="js-outcome-badge-container j-outcome-badge-container js-ed-102-15652 j-outcome-tlo-badge-container" data-object-type="102" data-object-id="15652"aria-label="Outcome badges"data-allowed-outcome-types="&quot;List(\&quot;decision\&quot;, \&quot;success\&quot;, \&quot;pending\&quot;, \&quot;helpful\&quot;, \&quot;resolved\&quot;)&quot;"aria-live="polite"></ul>    </header>
+    <span class="j-page-crease j-ui-elem"></span>
+
+
+    <section class="jive-content-body">
+
+<!-- UI-Extensions (if any)-->
+
+
+<!-- [DocumentBodyStart:7d352aa0-e0eb-48b7-be80-2458b19a45aa] --><div class="jive-rendered-content"><p style="text-align: center;"><a><img src="https://learningnetwork.cisco.com/static/brad_banner4_500x106.jpg" width="500"/></a></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>The Cisco Learning Network proudly presents a new series of video lectures on the topic of &#8220;CCNA Security: SSL VPNs.&rdquo;</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>If you are studying for your CCNA Security exam, or if you are considering a certification in security, an important area to understand is that of SSL VPNs.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>In this series, Brad Graham, who many of you may know from our previous video lectures series on <span class="active_link">IPsec VPNs</span> (and from our study/discussion groups), answers some of the most frequent SSL VPN questions he encounters covering deployment, customization, and verification.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>This series focuses on both Clientless and Client-based SSL VPNs using the Cisco ASA with the ASDM software package. Additionally, customization and verification topics will be discussed to provide a deeper understanding of the features and operation of SSL VPNs on the Cisco ASA platform.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><a class="jive-link-anchor-small" href="#home">About Brad</a></p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p>Those interested in this series may also be interested in <a class="jive-link-external-small" href="/docs/DOC-15048" title="CCNA Security: IPsec VPN">CCNA Security: IPsec VPN</a>.</p><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><table border="1" cellpadding="3" cellspacing="0" class="jiveBorder" style="background-image: none; background-color: #eaeaea; width: 99%; background-attachment: scroll; border-collapse: collapse; background-position: 0% 0%; border: 1px solid #cccccc;"><tbody><tr><td colspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 20px;padding-left: 10px;background-color: #6c6a6a;"><span style="color: #ffffff;"><strong>CCNA Security: SSL VPNs</strong></span><br/><span style="color: #fdfed8;"><em style="font-style: italic;">Access Requires Login</em></span></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #6c6a6a;" width="6%"><p><span style="color: #ffffff;"><strong>Learn<br/>More</strong></span></p></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #6c6a6a;" width="7%"><span style="color: #ffffff;"><strong>Duration</strong></span></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 5px;background-color: #6c6a6a;" width="6%"><p><span style="color: #ffffff;"><strong>Media<br/>Type</strong></span></p></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 5px;background-color: #6c6a6a;" width="8%"><span style="color: #ffffff;"><strong>Access<br/>Now</strong></span></td></tr><tr><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-bottom: 10px;padding-top: 10px;padding-left: 10px;" width="4%"><a><img align="left" alt="Part 1" border="0" src="https://learningnetwork.cisco.com/static/IMG_10581.jpg" style="float: left; padding: 0px 10px 5px 0px;"/></a></td><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-bottom: 10px;padding-top: 10px;padding-left: 10px;" width="95%"><p><strong>Part 1: SSL VPN Fundamentals</strong></p><ul><li>What are SSL VPNs?</li><li>Comparing SSL VPNs to IPSec VPNs</li><li>Selecting the Correct Technology</li><li>Different types of SSL VPNs</li><li>Cisco ASDM Overview</li><li>Software layout and accessing ASDM for the Cisco ASA</li></ul></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"><a data-containerId="2253" data-containerType="14" data-objectId="15637" data-objectType="102" href="https://learningnetwork.cisco.com/docs/DOC-15637"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;">32:46</td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;"><a><img alt="Video" src="https://learningnetwork.cisco.com/static/LCND1_VOD_blue.png" title="Video"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c05eee678e6c3a76dc3" title="Watch Now">Watch Now</a></strong></td></tr><tr><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"><a href="https://learningnetwork.cisco.com/static/info_grey.png"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info_grey.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;"><a><img src="https://learningnetwork.cisco.com/static/LCND1_doc.png" title="Transcript"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c05194b02b4a79649a9" title="Read Now">Read Now</a></strong></td></tr><tr><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;background-color: #ffffff;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;"><a><img align="left" alt="Part 2" border="0" src="https://learningnetwork.cisco.com/static/IMG_10611.jpg" style="float: left; padding: 0px 10px 5px 0px;"/></a></td><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;background-color: #ffffff;padding-top: 10px;padding-bottom: 10px;padding-left: 10px;"><p><strong><a name="lecture2"></a></strong></p><p><strong>Part 2: Deploying and Verifying Clientless SSL VPNs</strong></p><ul><li>Configuring clientless SSL VPNs</li><li>SSL VPN Configuration Wizard</li><li>Verifying Clientless SSL VPNs : ASDM</li><li>Verifying Clientless SSL VPNs : Web Browser</li></ul></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #ffffff;"><a data-containerId="2253" data-containerType="14" data-objectId="15637" data-objectType="102" href="https://learningnetwork.cisco.com/docs/DOC-15637"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #ffffff;">21:00</td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;background-color: #ffffff;"><a><img alt="Video" src="https://learningnetwork.cisco.com/static/LCND1_VOD_blue.png" title="Video"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;background-color: #ffffff;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c051292cba11f5013ac" title="Watch Now">Watch Now</a></strong></td></tr><tr><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #ffffff;"><a href="https://learningnetwork.cisco.com/static/info_grey.png"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info_grey.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #ffffff;"></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;background-color: #ffffff;"><a><img src="https://learningnetwork.cisco.com/static/LCND1_doc.png" title="Transcript"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;background-color: #ffffff;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c05951f633467a0cbf5" title="Read Now">Read Now</a></strong></td></tr><tr><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-bottom: 10px;padding-top: 10px;padding-left: 10px;"><a><img align="left" alt="Part 3" border="0" src="https://learningnetwork.cisco.com/static/IMG_10571.jpg" style="float: left; padding: 0px 10px 5px 0px;"/></a></td><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-bottom: 10px;padding-top: 10px;padding-left: 10px;"><p><strong>Part 3: Customizing and Verifying Clientless SSL VPNs </strong></p><ul><li>Customizing clientless SSL VPNs using ASDM</li><li>SSL VPN Web Portal customization</li><li>Verifying clientless SSL VPN customization with ASDM</li><li>Caveats when customizing clientless SSL VPNs</li></ul></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"><a data-containerId="2253" data-containerType="14" data-objectId="15637" data-objectType="102" href="https://learningnetwork.cisco.com/docs/DOC-15637"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;">47:05</td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;"><a><img alt="Video" src="https://learningnetwork.cisco.com/static/LCND1_VOD_blue.png" title="Video"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c0506268df1bc554295" title="Watch Now">Watch Now</a></strong></td></tr><tr><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"><a href="https://learningnetwork.cisco.com/static/info_grey.png"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info_grey.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;"><a><img src="https://learningnetwork.cisco.com/static/LCND1_doc.png" title="Transcript"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c05e5449061d004db11" title="Read Now">Read Now</a></strong></td></tr><tr><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-bottom: 10px;padding-top: 10px;padding-left: 10px;background-color: #ffffff;"><a><img align="left" alt="Part 4" border="0" src="https://learningnetwork.cisco.com/static/IMG_10701.jpg" style="float: left; padding: 0px 10px 5px 0px;"/></a></td><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-bottom: 10px;padding-top: 10px;padding-left: 10px;background-color: #ffffff;"><p><strong>Part 4:&nbsp; Deploying and Verifying Client-based SSL VPNs</strong></p><ul><li>Configuring Client Based SSL VPNs using ASDM</li><li>Configuration Wizard for Client Based SSL VPNs</li><li>Adding Cisco AnyConnect SSL VPN Client Software</li><li>Verifying Client-Based SSL VPN using ASDM</li><li>Verifying Client-Based SSL VPN using Cisco AnyConnect</li></ul></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #ffffff;"><a data-containerId="2253" data-containerType="14" data-objectId="15637" data-objectType="102" href="https://learningnetwork.cisco.com/docs/DOC-15637"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #ffffff;">22:18</td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;background-color: #ffffff;"><a><img alt="Video" src="https://learningnetwork.cisco.com/static/LCND1_VOD_blue.png" title="Video"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;background-color: #ffffff;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c0525d7e60f26d0dfda" title="Watch Now">Watch Now</a></strong></td></tr><tr><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #ffffff;"><a href="https://learningnetwork.cisco.com/static/info_grey.png"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info_grey.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;background-color: #ffffff;"></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;background-color: #ffffff;"><a><img src="https://learningnetwork.cisco.com/static/LCND1_doc.png" title="Transcript"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;background-color: #ffffff;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c059a6e3ff0b275ca8a" title="Read Now">Read Now</a></strong></td></tr><tr><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-bottom: 10px;padding-top: 10px;padding-left: 10px;"><a><img align="left" alt="Part 5" border="0" src="https://learningnetwork.cisco.com/static/IMG_10711.jpg" style="float: left; padding: 0px 10px 5px 0px;"/></a></td><td rowspan="2" style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-bottom: 10px;padding-top: 10px;padding-left: 10px;"><p><strong>Part 5:&nbsp; Customizing and Verifying Client-based SSL VPNs</strong></p><ul><li>Customizing client-based SSL VPNs using ASDM </li><li>Tunnel lock &amp; group lock, multiple default routes, &amp; split tunneling</li><li> Verifying Client-Based SSL VPN customization using ASDM</li><li>Verifying Client-Based SSL VPN&nbsp; customization using Cisco AnyConnect</li></ul></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"><a data-containerId="2253" data-containerType="14" data-objectId="15637" data-objectType="102" href="https://learningnetwork.cisco.com/docs/DOC-15637"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;">39:26</td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;"><a><img alt="Video" src="https://learningnetwork.cisco.com/static/LCND1_VOD_blue.png" title="Video"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c0570283936493e8426" title="Watch Now">Watch Now</a></strong></td></tr><tr><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"><a href="https://learningnetwork.cisco.com/static/info_grey.png"><img alt="More Information" src="https://learningnetwork.cisco.com/static/info_grey.png" title="More Information"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;padding-left: 10px;"></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;"><a><img src="https://learningnetwork.cisco.com/static/LCND1_doc.png" title="Transcript"/></a></td><td style="border:1px solid black;border: 1px solid #cccccc;border-collapse: collapse;height: 40px;padding-right: 5px;padding-left: 5px;"><strong><a class="jive-link-external-small cisco-link-encrypted" href="https://learningnetwork.cisco.com/decrypturl.jspa?url=9f59c99eabdb2c0573097dd90813ca54" title="Read Now">Read Now</a></strong></td></tr></tbody></table><p style="min-height: 8pt; padding: 0px;">&nbsp;</p><p><span>Brad</span>, who also authors one of our <a class="jive-link-blog-small" data-containerId="17" data-containerType="-2" data-objectId="2407" data-objectType="37" href="https://learningnetwork.cisco.com/blogs/journey-back-to-ccna">weekly blogs</a>, will be presenting these five recorded video lectures on July 25, August 1st, and August 8th.&nbsp; On each date new lectures will become available and can be accessed through the links in the table above.&nbsp; Each lecture will be accompanied by a hosted discussion board and these boards will be monitored by Brad where he will answer your questions on SSL VPN topics. Brad will check each board for one week after each lecture starting from July 25th and finishing on August 15th .</p><p><br/>Brad Graham, fondly referred to as our very own &#8220;Brad the Security Guy&rdquo;, has been a Cisco employee for 13 years and has worked as an Instructor, Course Developer, and Test Engineer.&nbsp; At various stages in his career he has held CCNA, CCDA, CCNP, CCDP, CQS-Security, and CCSP certifications.&nbsp; He has developed and taught many classes on subjects such as Enterprise Network Security, Data Centre Security, and SS7 Offload solutions, and has taught these classes at many global locations.&nbsp; In addition to his many other activities he has authored and co-authored books on network security and telecommunications for Cisco Press.&nbsp; He has also served as a technical editor for several other publications. He is a joint holder of US Patent #7,940,757 &#8211; Systems and Methods for Access Port ICMP Analysis with several other Cisco employees.</p></div><!-- [DocumentBodyEnd:7d352aa0-e0eb-48b7-be80-2458b19a45aa] -->
+
+<!-- BEGIN attachments -->
+<!-- END attachments -->
+
+<div id="previewable-binary-viewer"></div>
+    </section>
+
+    <footer class="jive-content-footer clearfix font-color-meta">
+     
+        <span class="jive-content-footer-item">
+            46080&nbsp;Views
+        </span>
+
+
+
+
+    <!-- BEGIN content details -->
+        
+
+        
+        <span class="jive-content-footer-item">
+                <span class="jive-icon-sml jive-icon-folder"></span>Categories:
+            
+            </span>
+
+
+
+    <!-- BEGIN view/add/edit tags -->
+    <span class="jive-content-footer-item jive-content-footer-tags">
+            <span class="jive-icon-sml jive-icon-tag"></span>Tags: <span id="jive-edit-inline-add-none" style="display:none;">none</span> <span style="display:none;" id="jive-edit-inline-placeholder"> (<a href="#" class="jive-edit-inline-tags-link">add</a>)</span>
+
+            <span class="jive-thread-post-details-tags" id="jive-thread-post-details-tags_5Ajcqh">
+                <a href="/community/certifications/security_ccna/tags#/?tags=security" title="Content tagged with security" aria-labelledby="tag-link-tooltip-0"><span role="presentation" aria-hidden="true">security</span><div id="tag-link-tooltip-0" class="j-508-label">Content tagged with security</div></a>,
+                <a href="/community/certifications/security_ccna/tags#/?tags=vpn" title="Content tagged with vpn" aria-labelledby="tag-link-tooltip-1"><span role="presentation" aria-hidden="true">vpn</span><div id="tag-link-tooltip-1" class="j-508-label">Content tagged with vpn</div></a>,
+                <a href="/community/certifications/security_ccna/tags#/?tags=ip" title="Content tagged with ip" aria-labelledby="tag-link-tooltip-2"><span role="presentation" aria-hidden="true">ip</span><div id="tag-link-tooltip-2" class="j-508-label">Content tagged with ip</div></a>,
+                <a href="/community/certifications/security_ccna/tags#/?tags=ssl" title="Content tagged with ssl" aria-labelledby="tag-link-tooltip-3"><span role="presentation" aria-hidden="true">ssl</span><div id="tag-link-tooltip-3" class="j-508-label">Content tagged with ssl</div></a>,
+                <a href="/community/certifications/security_ccna/tags#/?tags=video" title="Content tagged with video" aria-labelledby="tag-link-tooltip-4"><span role="presentation" aria-hidden="true">video</span><div id="tag-link-tooltip-4" class="j-508-label">Content tagged with video</div></a>,
+                <a href="/community/certifications/security_ccna/tags#/?tags=ccna_security" title="Content tagged with ccna_security" aria-labelledby="tag-link-tooltip-5"><span role="presentation" aria-hidden="true">ccna_security</span><div id="tag-link-tooltip-5" class="j-508-label">Content tagged with ccna_security</div></a>,
+                <a href="/community/certifications/security_ccna/tags#/?tags=lecture_series" title="Content tagged with lecture_series" aria-labelledby="tag-link-tooltip-6"><span role="presentation" aria-hidden="true">lecture_series</span><div id="tag-link-tooltip-6" class="j-508-label">Content tagged with lecture_series</div></a>
+            </span>
+    </span>
+    <!-- END view/add/edit tags -->
+<!-- END content -->
+
+
+    </footer>
+    <span class="j-doc-shadow j-left-doc-shadow j-ui-elem"></span>
+    <span class="j-doc-shadow j-right-doc-shadow j-ui-elem"></span>
+</div>
+
+
+<!-- END document -->
+
+        <div class="jive-content-rating clearfix" data-guid="OKVOHCDGMJXF75CRFN3DOKHBGF4G8NZ4">
+
+<script type='text/javascript'>
+    $j(document).ready(function() {
+
+        var i18n = {
+            avgUserRatingTitlei18n : "Average User Rating",
+            avgUserRatingLabeli18n : "Average User Rating",
+            rateRatingLabel : "rating",
+            myRatingLabel : "Your Rating:",
+            rateRatingsLabel : "ratings",
+            ratingSavingText : "Saving...",
+            rateSavedText : "Saved.",
+            rateRatingSaved : "Rating Saved!",
+            writeAReview : "Write a review",
+            commentOnRating : "Comment on your rating",
+            formSubmitPleaseWait:'Please Wait ...'
+        };
+        var rteOptions = {
+            controller    : jiveControl,
+            preset        : "mini-w-quote",
+            preferredMode : "advanced",
+            startMode     : "advanced",
+            mobileUI      : false,
+            communityName : 'Cisco Learning Home',
+            height        : 200
+        };
+
+
+        new jive.Rate(14, 2253, 102, 15652, 'doc', i18n, true, 'OKVOHCDGMJXF75CRFN3DOKHBGF4G8NZ4', rteOptions);
+    });
+
+</script>
+
+        </div>
+
+<ul id="js-outcome-summary-container-102-15652" class="js-outcome-summary-container j-outcome-summary-container js-ed-102-15652" data-object-type="102" data-object-id="15652" aria-label="Outcome summary" role="group"></ul>
+
+
+
+
+
+
+
+
+<!-- macro to display the generic warning about the content object being in moderation, abuse hidden, or rejected -->
+
+
+
+
+
+
+
+<div id="jive-rolled-up-comments" class="j-so-finalized-rollup j-rc4"  style="display:none" >
+    This content has been marked as final.&nbsp;
+    <a id='jive-unroll-comments' class="j-so-finalized-unroll j-comment-count" href="#">
+Show                 19 comments
+    </a>
+</div>
+
+<div id="jive-comment-tabs" class="j-comment-wrapper" id="comments" xmlns="http://www.w3.org/1999/html"  >
+
+            <!-- BEGIN tabs -->
+            <header>
+                <h3>Comments</h3>
+            </header>
+
+            <ul class="j-comment-options">
+                    <li id="jive-comments-tab" class="jive-body-tab j-tab-selected">
+                        <a href="#">
+                                <span id="jive-comments-count" class="j-comment-count">19</span> Comments
+                        </a>
+                    </li>
+
+            </ul>
+            <!-- END tabs -->
+
+            <div id="jive-comments" ></div>
+
+            <div style="display:none;" id="jive-comment-post-block">
+
+                <!-- moderation warning -->
+                <!-- end moderation warning -->
+
+                <form method="post" action="javascript:void(0);" name="jive-comment-post-form" class="j-comment-form">
+                    <div class="jive-error-box" id="jive-comment-error-box" style="display:none">
+                        <p class="jive-error-message" id="jive-comment-error" style="display:none"></p>
+                    </div>
+
+                    <input type="hidden" class="js-outcome-attachment" value="" />
+                    <div>
+                        <textarea name="commentBody" id="wysiwygtext" rows="10" class="jive-comment-textarea"></textarea>
+                    </div>
+
+                    <div style="display:none;" id="jive-blog-comment-preview" class="jive-blog-comment-preview"></div>
+
+                    <div class="jive-form-buttons">
+                        <input type="submit" name="post" class="j-btn-callout" value="Add Comment" />
+                        <input type="button" name="cancel" value="Cancel" />
+                    </div>
+
+                </form>
+            </div>
+
+            <div style="display:none;"  id="jive-comment-edit-block">
+                <form method="post" action="javascript:void(0);" name="jive-comment-edit-form" class="j-comment-form">
+                    <div class="jive-error-box" id="jive-comment-error-box" style="display:none">
+                        <p class="jive-error-text" id="jive-comment-error" style="display:none"></p>
+                    </div>
+                    <div class="jive-comment-post-anonymous">
+                        <div>
+                            <input name="name" value="" />
+                            <label for="name">Name
+                                <span>(Required)</span></label>
+                        </div>
+                        <div>
+                            <input name="email" value="" />
+                            <label for="email">Email Address
+                                <span>(Required, will not be published)</span></label>
+                        </div>
+                        <div>
+                            <input name="url" value=""/>
+                            <label for="url">Website Address</label>
+                        </div>
+                    </div>
+                    <div>
+                        <textarea name="commentBody" id="wysiwygtext" rows="10" class="jive-comment-textarea"><%= commentBody %></textarea>
+                    </div>
+
+                    <div style="display:none;" id="jive-blog-comment-preview" class="jive-blog-comment-preview"></div>
+
+                    <div class="jive-form-buttons">
+                        <input type="submit" name="post" class="j-btn-callout" value="Save" />
+                        <input type="button" name="cancel" value="Cancel" />
+                    </div>
+
+                </form>
+            </div>
+        </div> <!-- / .jive-comment-wrapper -->
+
+
+
+<!-- draft deps -->
+
+
+
+
+
+    <form id="documentDeleteForm" method="post" action='/docs/DOC-15652/delete'>
+        <input type="hidden" name="jive.token.name" value="document.delete.DOC-15652"/>
+        <input type="hidden" name="document.delete.DOC-15652" value="[placeholder]"/>
+    </form>
+
+    <div class="jive-modal jive-modal-narrow" id="jive-modal-delete-doc">
+        <header><h2 class="jive-modal-title jive-modal-title-delete-doc">Delete Document</h2></header>
+        <a href="#" class="j-modal-close-top close">Close <span class="j-close-icon j-ui-elem" role="img"></span></a>
+
+        <div class="jive-modal-content jive-modal-delete-doc clearfix">
+
+            <p><span class="jive-icon-med jive-icon-warn"></span>Are you sure you want to delete this document?</p>
+
+            <div class="jive-form-buttons">
+
+                <input id="doc-delete-submit-button" type="submit" class="j-btn-callout" name="delete" value="Delete">
+                <input id="doc-delete-close-button" type="submit" class="jive-modal-close close" value="Cancel">
+            </div>
+        </div>
+    </div>
+
+            </div>
+        </div>
+
+
+
+        <!-- BEGIN sidebar column -->
+        <div id="jive-body-sidebarcol-container" class="j-column j-column-s j-content-extras">
+
+
+    <ul class="j-box j-social-actions j-rc5 clearfix" role="toolbar" aria-label="Social Actions">
+            <li class="j-js-follow-controls" data-streamsassoc="0" data-location='jive-macros' aria-live="polite" aria-atomic="true">
+                <a id="jive-link-document-startFollowing"  style="" href="#" class="j-social-action">
+                    <span class="jive-icon-med jive-icon-activity-pulse-active"></span>
+Follow                </a>
+                <a id="jive-link-document-following"  style="display: none;" href="#" class="j-social-action">
+                    <span class="jive-icon-med jive-icon-follow"></span>
+                    <span class="j-js-streams-assoc-count j-instream-count">
+                    </span>
+                </a>
+            </li>
+
+            <li>
+                <a href="#" class="j-social-action" data-command="share" data-object-id="15652" data-object-type="102">
+                    <span>
+                        <span class="jive-icon-med jive-icon-share"></span>
+Share                    </span>
+                </a>
+            </li>
+
+            <li class="last">
+
+
+        
+        
+        
+<div class="bookmark-controls" data-object-type="102" data-object-id="15652" id="bookmark-app-OaJnOu" data-count="45"><a href="#" class="bookmark-content j-social-action"><span class="jive-icon-med jive-icon-bookmark-ribbonaction-grey"></span>Bookmark</a><label class="j-508-label" id="showBookmarks-15652-102-count-label">Show 45 Bookmarks</label><a  class="j-people-count j-rc3" data-command="showBookmarks" data-object-id="15652" data-object-type="102" data-count="45" href="#" role="button"aria-labelledby="showBookmarks-15652-102-count-label">45</a></div>            </li>
+
+
+
+        <script>
+            $j(function() {
+                /*
+                * Oh how I wish I didn't have to do it this way.
+                *
+                * it's JS instead of CSS because the hovered element affects the parent.
+                * it's delegate instead of simple event binding because the bookmark element gets replaced when the user takes action.
+                *
+                 */
+                $j('.j-social-actions').delegate('a.j-social-action', 'mouseover', function() {
+                    $j(this).closest('li').addClass('hover');
+                }).delegate('a.j-social-action', 'mouseout', function() {
+                    $j(this).closest('li').removeClass('hover');
+                }).delegate('a.j-social-action', 'mousedown', function() {
+                    $j(this).closest('li').addClass('active');
+                }).delegate('a.j-social-action', 'mouseup', function() {
+                    $j(this).closest('li').removeClass('active');
+                })
+
+
+            })
+        </script>
+    </ul>
+
+
+
+
+
+
+<div class="j-box j-box-actions" role="toolbar" aria-labeledby="jive-action-sidebar-tab-header_document-actions-tab">
+    <header>
+        <h4 id="jive-action-sidebar-tab-header_document-actions-tab">Actions</h4>
+    </header>
+    <div id="jive-action-sidebar_document-actions-tab" class="j-box-body">
+
+        <div id="jive-action-sidebar-tab-_document-actions-tab"
+             class="jive-action-sidebar-tab-first">
+                
+
+
+            <ul id="jive-action-sidebar-tab-list_document-actions-tab" class=" j-icon-list">
+
+
+
+
+
+
+
+                <li id="jive-link-abuse" style=""
+                        ><a href="/message-abuse!input.jspa?objectID=15652&amp;objectType=102"
+rel="nofollow"
+onclick=""
+title="">
+<span class="jive-icon-med jive-icon-warn"></span>
+Report abuse
+</a></li>
+
+
+
+                <li id="jive-link-document-pdf" style=""
+                        ><a href="/docs/DOC-15652.pdf"
+rel="nofollow"
+onclick=""
+title="">
+<span class="jive-icon-med jive-icon-doctype-acrobat"></span>
+View as PDF
+</a></li>
+
+
+
+                <li id="featured-toggle-unfeature-onprofile" style="
+                    display:none"
+                        ><a href="#"
+rel="nofollow"
+onclick="toggleFeaturedOnProfile(); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-forbidden
+"></span>
+Remove from profile
+</a></li>
+
+                <li id="featured-toggle-feature-onprofile" style="
+                    display:none"
+                        ><a href="#"
+rel="nofollow"
+onclick="toggleFeaturedOnProfile(); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-plus
+"></span>
+Feature on your profile
+</a></li>
+
+                <li id="finalized-mark" style="
+                    display:none
+                "
+                        ><a href="#"
+rel="nofollow"
+onclick="
+jive.localexchange.emit('outcome.doAction', 'outcome.post', { id: 15652, type: 102 }, { id: 2, name: 'finalized', shareable: false, noteRequired: false, urlAllowed: false, generalNote: false, confirmExclusion: true, confirmUnmark: true }, $j(this)); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-finalized jive-icon-outcome
+js-tlo-action-button js-outcome-type-finalized js-outcome-method-post
+"></span>
+Mark as Final
+</a></li>
+
+                <li id="official-mark" style="
+                    display:none
+                "
+                        ><a href="#"
+rel="nofollow"
+onclick="
+jive.localexchange.emit('outcome.doAction', 'outcome.post', { id: 15652, type: 102 }, { id: 8, name: 'official', shareable: false, noteRequired: false, urlAllowed: false, generalNote: false, confirmExclusion: true, confirmUnmark: false }, $j(this)); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-official jive-icon-outcome
+js-tlo-action-button js-outcome-type-official js-outcome-method-post
+"></span>
+Mark as Official
+</a></li>
+
+                <li id="pending-mark" style="
+                    display:none
+                "
+                        ><a href="#"
+rel="nofollow"
+onclick="
+jive.localexchange.emit('outcome.doAction', 'outcome.post', { id: 15652, type: 102 }, { id: 3, name: 'pending', shareable: true, noteRequired: true, urlAllowed: false, generalNote: false, confirmExclusion: false, confirmUnmark: false }, $j(this)); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-pending jive-icon-outcome
+js-tlo-action-button js-outcome-type-pending js-outcome-method-post
+"></span>
+Mark for Action
+</a></li>
+
+                <li id="success-mark" style="
+                    display:none
+                "
+                        ><a href="#"
+rel="nofollow"
+onclick="
+jive.localexchange.emit('outcome.doAction', 'outcome.post', { id: 15652, type: 102 }, { id: 6, name: 'success', communityAudience: 'true', rootCommunityName: 'Cisco Learning Home', noteOptional:true, shareable: false, noteRequired: false, urlAllowed: false, generalNote: true, confirmExclusion: false, confirmUnmark: false }, $j(this)); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-success jive-icon-outcome
+js-tlo-action-button js-outcome-type-success js-outcome-method-post
+"></span>
+Mark as Success
+</a></li>
+
+                <li id="outdated-mark" style="
+                    display:none
+                "
+                        ><a href="#"
+rel="nofollow"
+onclick="
+jive.localexchange.emit('outcome.doAction', 'outcome.post', { id: 15652, type: 102 }, { id: 7, name: 'outdated', shareable: false, noteRequired: false, urlAllowed: true, generalNote: false, confirmExclusion: false, confirmUnmark: false }, $j(this)); return false;"
+title="">
+<span class="
+jive-icon-med jive-icon-outdated jive-icon-outcome
+js-tlo-action-button js-outcome-type-outdated js-outcome-method-post
+"></span>
+Mark as Outdated
+</a></li>
+
+            </ul>
+        </div> <!-- /#jive-action-sidebar-tab-_id -->
+
+    </div>
+
+
+</div><!-- /.j-box-actions -->
+
+
+
+
+
+
+
+
+    <!-- BEGIN sidebar box 'More Like This' -->
+    <div class="j-box">
+        <header>
+            <h4 id="more-like-header-102-15,652">More Like This</h4>
+        </header>
+        <nav class="j-box-body" role="navigation" aria-labeledby="more-like-header-102-15,652">
+                <div id="jive-more-like-this-102-15652">
+                    <p>Retrieving data ...</p>
+                </div>
+        </nav>
+    </div>
+
+    <!-- END sidebar box 'More Like This' -->
+
+
+    
+    
+
+<!-- BEGIN sidebar box 'Incoming Links' -->
+<div class="j-box">
+    <header>
+        <h4>Incoming Links</h4>
+    </header>
+    <div class="j-box-body">
+        <ul class="j-icon-list">
+                    <li>
+                        <a href="https://learningnetwork.cisco.com/docs/DOC-28823">
+            <span              title="Document"
+            class="jive-icon-med jive-icon-document"
+ ></span>
+                            IINS v3.0 学習情報
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://learningnetwork.cisco.com/docs/DOC-23683">
+            <span              title="Document"
+            class="jive-icon-med jive-icon-document"
+ ></span>
+                            IINS 学習情報
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://learningnetwork.cisco.com/docs/DOC-23674">
+            <span              title="Document"
+            class="jive-icon-med jive-icon-document"
+ ></span>
+                            SSL VPNs: Part 5: Customizing and Verifying Client-based SSL VPNs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://learningnetwork.cisco.com/docs/DOC-23673">
+            <span              title="Document"
+            class="jive-icon-med jive-icon-document"
+ ></span>
+                            SSL VPNs: Part 4: Deploying and Verifying Client-based SSL VPNs
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://learningnetwork.cisco.com/docs/DOC-23672">
+            <span              title="Document"
+            class="jive-icon-med jive-icon-document"
+ ></span>
+                            SSL VPNs: Part 3: Customizing and Verifying Clientless SSL VPNs 
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://learningnetwork.cisco.com/docs/DOC-23671">
+            <span              title="Document"
+            class="jive-icon-med jive-icon-document"
+ ></span>
+                            SSL VPNs: Part 2: Deploying and Verifying Clientless SSL VPNs
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+<!-- END sidebar box 'Incoming Links' -->
+
+
+<!-- /template/global/include/incoming-links.ftl render time:92-->
+
+<!-- requires plugin installation -->
+<!-- /template/conversion/office-plugin-download.ftl render time:0-->
+
+        </div>
+        <!-- END sidebar column -->
+
+
+    </div>
+
+</div></section><div id="jiveTT-note" class="jive-tooltip2 notedefault snp-mouseoffset" role="tooltip"><div class="jive-tooltip2-mid j-mini-modal j-mini-modal-place"><div class="jive-tooltip2-mid-padding j-modal-content clearfix j-js-note-body" id="jive-note-body"></div></div></div><div id="jiveTT-note-additems" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content clearfix" id="jive-note-additems-body"></div></div></div><div id="jiveTT-note-checkpoint" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content" id="jive-note-checkpoint-body"></div></div></div><div id="jiveTT-note-tasks" class="jive-tooltip2 notedefault snp-mouseoffset"  ><div class="jive-tooltip2-mid j-mini-modal"><div class="jive-tooltip2-mid-padding j-modal-content" id="jive-note-tasks-body"></div></div></div>
+
+<!-- /template/bridge/null.ftl render time:1-->
+    <div class="j-js-footer-wrap"><footer id="j-footer" role="contentinfo"><!-- removing OOB footer links<div id="j-footer-poweredBy"><a class="font-color-meta" href="http://www.jivesoftware.com/poweredby/" target="_blank" title="Jive Software Version: 7.0.3.1 , revision: Custom">&copy; 2007-2017 Jive Software &nbsp; | <img src="/7.0.3.0/images/powered_by_Jive.png" title="Powered by Jive" alt="Powered by Jive"/></a></div><div class="j-footer-nav"><a class="font-color-meta" href="/">Home</a> | <a class="font-color-meta" href="#top">Top of page</a> | <a class="font-color-meta" href="http://www.jiveon.com/about">About Jive</a> | <a class="font-color-meta" href="http://docs.jivesoftware.com/jive/7.0/community_user/index.jsp">Help</a></div>--><ul class="footer-social"><li>Follow us:</li><li><a href="https://www.facebook.com/learningatcisco" data-tracking-label="CLN-Footer-Facebook" target="_blank"><span class="cln-icon fb"></span></a></li><li><a href="https://twitter.com/LearningatCisco" data-tracking-label="CLN-Footer-Twitter" target="_blank"><span class="cln-icon tw"></span></a></li><li><a href="http://www.linkedin.com/groups?mostPopular=&amp;gid=3443017" data-tracking-label="CLN-Footer-LinkedIn" target="_blank"><span class="cln-icon ln"></span></a></li><li><a href="https://plus.google.com/111173040897560888570" data-tracking-label="CLN-Footer-GooglePlus" target="_blank"><span class="cln-icon gplus"></span></a></li><li><a href="https://www.instagram.com/learningatcisco/" data-tracking-label="CLN-Footer-Instagram" target="_blank"><span class="cln-icon insta"></span></a></li><li><a href="https://www.youtube.com/playlist?list=PL3C35F3096BE390FD" data-tracking-label="CLN-Footer-YouTube" target="_blank"><span class="cln-icon yt"></span></a></li><li><a href="https://www.pinterest.com/learningcisco/pins/" data-tracking-label="CLN-Footer-Pinterest" target="_blank"><span class="cln-icon pinterest"></span></a></li></ul><ul class="footer-links"><li><a href="http://www.cisco.com/web/siteassets/legal/terms_condition.html">Terms & Conditions</a></li><li><a href="http://www.cisco.com/web/siteassets/legal/privacy.html">Privacy Statement</a></li><li><a href="http://www.cisco.com/web/siteassets/legal/privacy.html#cookies">Cookie Policy</a></li><li><a href="http://www.cisco.com/web/siteassets/legal/trademark.html">Trademarks</a></li><li><a id="footer-language-menu" href="#">Languages<span class="j-ui-elem j-nav-more"></span></a></li><div style="display:none" id="footer-language-dropdown"><ul><li><a href="http://www.clnchina.com.cn/careers">China</a></li><li><a href="/community/connections/jp/career">Japan</a></li><li><a href="/community/connections/careers_in_india">India</a></li></ul></div></ul><div class="j-footer-jiveVersion">Jive Software Version: 7.0.3.1 , revision: Custom</div><span id='speakSpan' class='j-508-label' role='marquee' aria-live='assertive' aria-relevant='all'></span><script type="text/javascript">
+    document.write(unescape("%3Cscript src='//munchkin.marketo.net/munchkin.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script>Munchkin.init('564-WHV-323');</script>
+
+<script>
+    /**
+     * Function that tracks a click on an outbound link in Google Analytics, customized for CLN
+     * This function parses a valid URL string from the link that was clicked and uses that URL string to load a new page
+     * Custom label is collected from the clicked link, as well.
+     */
+    $j(document).ready(function () {
+        //console.log('adding handlers to social links');
+        $j('ul.footer-social > li > a').click(function (e) {
+            var $outLink = $j(this);
+            ga('send', 'event', 'CLN-Footer-Social-Icons', 'click', $outLink.attr('data-tracking-label'), {});
+        });
+    });
+</script>
+
+<!-- used to set a cookie to specify site catalyst environment -->
+<script type="text/javascript">document.cookie = "s_tagEnv=prod";</script>
+                    
+                    
+                    </footer></div><div class="j-alert-container" role="alert" aria-live="polite" aria-atomic="true"></div><span id="j-speak-accessibility" class="j-508-label" role="status" aria-live="polite" aria-relevant="all" aria-atomic="true"></span><script>(function() {var prepareUrl = function(url) {if (url.indexOf(";") > 0) {url = url.substring(0, url.indexOf(";"));}if (url.charAt(url.length - 1) == '/') {url = url.substring(0, url.length - 1);}return url}; if (typeof(window._jive_base_url) == "undefined") {window._jive_base_url = prepareUrl("\/")}if (typeof(window._jive_base_absolute_url) == "undefined") {window._jive_base_absolute_url = prepareUrl("https:\/\/learningnetwork.cisco.com")}if (typeof(window._jive_resource_url) == "undefined") {window._jive_resource_url = prepareUrl("\/7.0.3.0\/")}if (typeof(window._jive_theme_url) == "undefined") {window._jive_theme_url = prepareUrl("\/themes\/cln\/")}if (typeof(window._jive_current_user) == "undefined") {window._jive_current_user = {anonymous: false, partner: false, visible: true, username: 'remosyxu@gmail.com', ID: '1186909', enabled: true, avatarID: '6779', displayName: 'Remosy'};}})(); var _jive_effective_user_id = "1186909"; var _jive_auth_token ="3e6361ceb488c9510b8a0e87989ef97557e5254386aed36b7e563fdb566ed70f"; var _jive_locale = "en_AU"; var _jive_translation_language = "en"; var _jive_browser_event = {"providers":["activityStream.poll","appAlert.create"],"since":1511153601470}; var _jive_browser_event_polling_delay =  30000.0 ; var _jive_socket_events = {"socketEvents":["tiledata.push","activityStream.push"]}; var _jive_realtime_push_enabled =  false ;var _jive_timezoneoffset =  -8.0 ; var jive = jive || {}; jive.global = jive.global || {}; jive.global.instanceID = '35f0e228-bd64-4353-a04f-d5283dc8a73b'; jive.global.containerType = '14'; jive.global.containerID = '2253';jive.global.containerBrowseId = '274914';window.SPELL_LANGS = "English (Canada)\x3den_ca,English (United Kingdom)\x3den_gb,+English (United States)\x3den_us,French\x3dfr,French (Canada)\x3dfr_ca,German\x3dde,Italian\x3dit,Spanish\x3des"; window.CS_BASE_URL = ""; window.CS_RESOURCE_BASE_URL = "\/7.0.3.0"; window.tinyMCEPreInit = {suffix : "_src", base : CS_BASE_URL + "/resources/scripts/tiny_mce3"}; if (typeof(_jive_project_i18n) == "undefined") {var _jive_project_i18n = new Array(); _jive_project_i18n['project.calendar.task'] = "Task"; _jive_project_i18n['project.calendar.tasks'] = "Tasks"; _jive_project_i18n['project.calendar.checkpoint'] = "Checkpoint"; _jive_project_i18n['project.calendar.checkpoints'] = "Checkpoints"; _jive_project_i18n['global.edit'] = "Edit"; _jive_project_i18n['global.delete'] = "Delete"; _jive_project_i18n['project.task.mark.complete'] = "Mark complete"; _jive_project_i18n['project.task.assign.to.me'] = "Assign to me"; _jive_project_i18n['task.incomplete.link'] = "Incomplete"; _jive_project_i18n['project.checkPoint.create.link'] = "Create a checkpoint"; _jive_project_i18n['project.task.create.link'] = "Create a task";}</script><!-- BEGIN CLN js resouces --><script src="/themes/cln/scripts/meganav.js" type="text/javascript"></script><script src="/themes/cln/scripts/jquery.hoverIntent.minified.js" type="text/javascript"></script><script src="/themes/cln/scripts/jquery.contabs.js" type="text/javascript"></script><script src="/themes/cln/scripts/jquery.jcarousel.min.js" type="text/javascript"></script><script src="/themes/cln/scripts/jquery.tooltipster.min.js" type="text/javascript"></script><script src="/themes/cln/scripts/social-sharing.js" type="text/javascript"></script><script src="/themes/cln/scripts/cln-carousel.js" type="text/javascript"></script><script src="/themes/cln/scripts/terms.js" type="text/javascript"></script><!-- END CLN js includes --><!--[if (gte IE 6)&(lte IE 8)]><script type="text/javascript" src="/themes/cln/scripts/selectivizr-min.js"></script><![endif]--><script>var containerShortUrl = "\/container-short.jspa"; var videoShortUrl = "\/view-video-short.jspa"; var profileShortUrl = "\/profile-short.jspa"; var profileLoadingTooltip = "Loading user profile"; var profileErrorTooltip = "There was an error loading that profile information."; var followErrorMessage = "An internal error occurred while following the object."; var ajaxErrorMessage = "An unexpected error has occurred. Please make sure that your session did not expire while viewing this page."; var ajaxNotFoundMessage = "The specified item was not found.";; var ajaxUnauthorizedMessage = "You are not authorized to perform this operation. If you are not logged in please log in and try again.";
+        (function() {
+            var originalWrite = document.write;
+            document.write = function() {
+                if(typeof $j != 'undefined' && $j.isReady) {
+                    console.warn("document.write called after document was loaded: ", arguments);
+                }
+                else {
+                    // In IE before version 8 `document.write()` does not
+                    // implement Function methods, like `apply()`.
+                    return Function.prototype.apply.call(originalWrite, document, arguments);
+                }
+            }
+        })();
+        </script><script>
+reg(["osapi","shindig","gadgets"], ["/7.0.3.0/resources/scripts/gen/db8ab461b0291263af1df7c3f7016ce0.js"],function(){
+define('gadgets', gadgets); define('shindig', shindig); define('osapi', osapi);
+
+
+});
+</script><script type="text/javascript">window.appsMarketEnabled =  false ; window.anyAppsEnabled =  true ; window.appUUIDs = ""; $j(document).ready(function() {require(['appContainer'], function(appContainer) {});});</script><script>
+reg(["JAF","appContainer","syntheticAppContainer"], ["/7.0.3.0/resources/scripts/gen/8d6171a2bbf4943dba06ccb8611ab30a.js"],function(){
+define('JAF', ['osapi'], function(osapi) {return {};});
+
+$j(document).ready(function() {define('appContainer', ['jive/app/core_container/'+'main', 'jive/app/core_container/'+'common_container'], function(C) {var c = new C(); c.initActionLinkContext({coreAPIType: 'osapi.jive.core.Document', id: 15652  }); return c;}); define('syntheticAppContainer', ['appContainer'], function(c) {return c;});});
+
+
+});
+</script><script src="/7.0.3.0/resources/scripts/gen/cfcb14bea43f5b391c3245379fbef24a.js"></script>
+<script>
+if (dwr == null) var dwr = {};
+if (dwr.engine == null) dwr.engine = {};
+if (DWREngine == null) var DWREngine = dwr.engine;
+
+DWREngine._origScriptSessionId = "998FBD23471023C5386F72FFC096ADFE";
+DWREngine._sessionCookieName = "JSESSIONID"; // JSESSIONID
+DWREngine._allowGetForSafariButMakeForgeryEasier = "true";
+DWREngine._scriptTagProtection = "throw 'allowScriptTagRemoting is false.';";
+DWREngine._defaultPath = "/dwr/interface";
+DWREngine._pollWithXhr = "false";
+if (jQuery.fn.message && DWREngine.setErrorHandler) {
+    DWREngine.setErrorHandler(function(message, ex) {
+        dwr.engine._debug('Error: ' + ex.name + ', ' + ex.message, true);
+        if (message == null || message == '') jQuery('<p>A server error has occurred.</p>').message({ style: 'error' });
+        // Ignore NS_ERROR_NOT_AVAILABLE if Mozilla is being narky
+        else if (message.indexOf('0x80040111') != -1) dwr.engine._debug(message);
+        else jQuery('<p/>').text(message).message({ style: 'error' });
+    })
+}
+
+
+jive.rte.defaultStyles = ["\/7.0.3.0\/plugins\/video_7.0.0-dev\/resources\/styles\/jive-videomodule.css","\/7.0.3.0\/plugins\/antivirus_7.0.3.1\/resources\/styles\/antivirus.css?v\x3d7.0.2","\/7.0.3.0\/plugins\/gamification_7.0.0-dev\/resources\/styles\/n4jive.css","\/7.0.3.0\/plugins\/gamification_7.0.0-dev\/resources\/styles\/lib\/n4jive\/n4jive.core.css","\/7.0.3.0\/plugins\/gamification_7.0.0-dev\/resources\/styles\/lib\/n4jive\/nitro4x.base.css"];
+
+var jiveControl = null; require(['jive/model/control'], function(JiveModelController) {jiveControl = new JiveModelController();}); jive.rte.mobileUI = false;
+
+jive.observable = jive.conc.observable;
+
+jive.global.typeToNumeric = {"update":1464927464,"person":3,"idea":3227383,"discussion":1,"collaboration":2800,"extStreamActivity":-960826044,"blog":37,"space":14,"share":109400031,"document":102,"poll":18,"file":102,"event":96891546,"webhook":1224013431,"dm":109016030,"carousel":1527402675,"mention":550,"contentVersion":120,"slide":1606291040,"privateprop":987082157,"video":1100,"invite":350,"announcement":22,"post":38,"static":1140061448,"profileImage":501,"task":602,"streamEntry":1501,"securityGroup":4,"image":111,"interaction":2801,"attachment":13,"favorite":800,"outcome":2700,"extprop":-1840153649,"url":801,"message":2,"project":600,"system":-2,"embedded_video":1100,"group":700,"comment":105,"user":2020}; jive.global.typeToMacroName = {"update":"microblog","person":"user","idea":"idea","post":"blogpost","discussion":"thread","extStreamActivity":"tilestream","task":"task","space":"community","blog":"blog","url":"external-site","message":"message","project":"project","document":"document","poll":"polls","event":"event","file":"document","embedded_video":"videolink","group":"group","video":"videolink"};
+
+$j.ajaxSettings.traditional = true;
+
+$j(function(){define('documentReady',document);});
+
+require(['tAMD/hooks'], function(h) {h.on('define', 'Zapatec.Calendar', function(id, deps, factory, next) {reg(['Zapatec.Calendar.translations'], ['\/7.0.3.0\/resources\/scripts\/zapatec\/zpcal\/lang\/calendar-en.js'], function() {define('Zapatec.Calendar.translations', {});}); require(['Zapatec.Calendar.translations'], $j.noop); next(id, deps.concat('Zapatec.Calendar.translations'), factory);}); h.on('publish', 'Zapatec.Calendar', function(id, Calendar, next) {Calendar._TT["DEF_DATE_FORMAT"] = "%d\/%m\/%Y"; next(id, Calendar);});});
+
+$j(function() {require(['apps/shared/controllers/browser_events'], $j.noop);});
+
+$j(document).ready(function() {var followView = new jive.FollowUserApp.ProfileFollowView({i18n: {startFollowingMessage: '<p>You are now following {0}.</p>', stopFollowingMessage:  '<p>You have stopped following {0}.</p>', pendingConnectionMessage: '<p>Note: {0} will need to approve your request</p>'}, bidirectional: false}); var jiveUserFollow = new jive.FollowUserApp.Main({followView: followView}); $j("input[placeholder]").placeHeld();});
+
+</script>
+<script>var containerType = '14'; var containerID = '2253';var spotlightSearchURL = "spotlight-search";</script><script>window._jive_images_enabled = true;</script><script>
+reg(["jive.rte"], ["/7.0.3.0/resources/scripts/gen/615897872ce341497dfec9000658b146.js"],function(){
+window.errorHandlerMessage = "An error occurred:";
+            window.editorErrorHandler = function(message, exception) {
+              // if the message is something other than a timeout, show the message plus the error code
+              if (message.indexOf('Timeout') == -1) {
+                  $j('#dwr-error-text').text(errorHandlerMessage + ' Error Code: ' + message);
+                  $j('#dwr-error-table').fadeIn();
+                  setTimeout(function() {
+                      $j('#dwr-error-table').fadeOut();
+                  }, 10000);
+              }
+            };
+            if(typeof(tinyMCE) != "undefined"){tinyMCE.addI18n('en.jivemacros',{"unused.jive.key" : "nothing."});}
+          window.RawHTMLSaveFunction = function(element_id, html, body){
+              var text = $j('#wysiwygtext');
+              if (text.is(':not(:visible)')) {
+                  return html;
+              }else{
+                  return text.val();
+              }
+          }
+          jive.rte.multiRTE = new Array();
+  
+          //Not used by RTEWrap, but we need this for backward compatibility; see CS-23883
+          window.refreshLinks = function() {
+              jive.rte.multiRTE.forEach(function(rteID) {
+                  if ($j('#' + rteID + '_parent').length < 1) {
+                      // safari 2, text only
+                      $j('#' + rteID + '_toggle_html').hide();
+                      $j('#jivePreferredEditorModeLinkHREF').hide();
+                      return;
+                  }
+  
+                  if(currentMode == 'rawhtml') {
+                      $j('#' + rteID + '_toggle_html').css('display', 'block');
+                  }else{
+                      $j('#' + rteID + '_toggle_html').hide();
+                  }
+  
+                  if (preferredMode == currentMode) {
+                      $j('#jivePreferredEditorModeLinkHREF').hide();
+                  } else {
+                      $j('#jivePreferredEditorModeLinkHREF').css('display', 'block');
+                  }
+              });
+          }
+  
+          window.editor = new jive.ext.y.HashTable();
+          
+
+
+jive.rte.macros.push(new jive.rte.Macro("color","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("size","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("font","","TEXT", true, false, [], [{name: "0",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("toc","","IMAGE", true, true, [], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("code","","TEXT", false, true, [{ name: "sql", deleteAll: true, params: [{ name: "__default_attr", value :"sql"} ]},{ name: "html", deleteAll: true, params: [{ name: "__default_attr", value :"html"} ]},{ name: "xml", deleteAll: true, params: [{ name: "__default_attr", value :"xml"} ]},{ name: "java", deleteAll: true, params: [{ name: "__default_attr", value :"java"} ]},{ name: "plain", deleteAll: true, params: [{ name: "__default_attr", value :"plain"} ]}], [{name: "__default_attr",value: ["sql","html","xml","java","plain"]}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("noformat","","TEXT", true, false, [], [], true,false));
+jive.rte.macros.push(new jive.rte.Macro("thread","thread/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("message","message/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("external-site","bookmarks/","INLINE", false, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("document","docs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("tag","tags/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "tag",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("microblog","status/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("polls","polls/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("blogpost","blogs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("blog","blogs/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "name",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("community","community/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("space","community/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("user","people/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""},{name: "username",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("project","project/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("task","view-task.jspa?task=","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("group","groups/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("quote","","TEXT", false, true, [], [{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("vimeo","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("veoh","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("dailymotion","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("youtube","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("kaltura","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerKey",value: ""},{name: "playerID",value: ""},{name: "partnerID",value: ""},{name: "playerColor",value: "#FFFFFF"}], false,false));
+jive.rte.macros.push(new jive.rte.Macro("brightcove","","IMAGE", false, false, [], [{name: "__default_attr",value: ""},{name: "width",value: ""},{name: "height",value: ""},{name: "playerKey",value: ""},{name: "playerID",value: ""},{name: "partnerID",value: ""},{name: "playerColor",value: "#FFFFFF"}], false,false));
+jive.rte.macros.push(new jive.rte.Macro("application","","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "__title",value: ""},{name: "__view",value: ""},{name: "__params",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("appEmbeddedView","","INLINE", true, false, [], [{name: "_default_attr",value: ""},{name: "_appuuid",value: ""},{name: "_title",value: ""},{name: "_view",value: ""},{name: "_context",value: ""},{name: "_url",value: ""},{name: "_previewimage",value: ""},{name: "_icon",value: ""},{name: "_action_id",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("tilestream","external/","INLINE", true, false, [], [{name: "id",value: ""},{name: "__default_attr",value: ""},{name: "title",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("videomacro","","IMAGE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "videoid", value :""} ,{ name: "__default_attr", value :""} ,{ name: "jivemacro_uid", value :""} ,{ name: "width", value :""} ,{ name: "height", value :""} ,{ name: "imageURL", value :""} ]}], [{name: "id",value: ""},{name: "height",value: ""},{name: "width",value: ""},{name: "jivemacro_uid",value: ""},{name: "__default_attr",value: ""},{name: "videoid",value: ""},{name: "imageURL",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("videolink","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "jivemacro_uid", value :""} ,{ name: "title", value :""} ,{ name: "zero", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "jivemacro_uid",value: ""},{name: "__default_attr",value: ""},{name: "zero",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("event","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "title", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("ciscolink","","INLINE", true, true, [{ name: "Normal", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"normal"} ,{ name: "encrypt", value :"false"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"false"} ,{ name: "visibility", value :"all"} ]},{ name: "Normal With Encryption", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"normal"} ,{ name: "encrypt", value :"true"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"false"} ,{ name: "visibility", value :"all"} ]},{ name: "New Window", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"blank"} ,{ name: "encrypt", value :"false"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"false"} ,{ name: "visibility", value :"all"} ]},{ name: "New Window With Encryption", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"blank"} ,{ name: "encrypt", value :"true"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"false"} ,{ name: "visibility", value :"all"} ]},{ name: "Popup", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"popup"} ,{ name: "encrypt", value :"false"} ,{ name: "popup_width", value :"800"} ,{ name: "popup_height", value :"600"} ,{ name: "popup_left", value :"50"} ,{ name: "popup_top", value :"50"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"false"} ,{ name: "visibility", value :"all"} ]},{ name: "Popup With Encryption", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"popup"} ,{ name: "encrypt", value :"true"} ,{ name: "popup_width", value :"800"} ,{ name: "popup_height", value :"600"} ,{ name: "popup_left", value :"50"} ,{ name: "popup_top", value :"50"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"false"} ,{ name: "visibility", value :"all"} ]},{ name: "Fee Content", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"normal"} ,{ name: "encrypt", value :"false"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"true"} ,{ name: "visibility", value :"all"} ]},{ name: "Fee Content With Encryption", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"normal"} ,{ name: "encrypt", value :"true"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"true"} ,{ name: "visibility", value :"all"} ]},{ name: "Fee Content New Window", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"blank"} ,{ name: "encrypt", value :"false"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"true"} ,{ name: "visibility", value :"all"} ]},{ name: "Fee Content New Window With Encryption", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"blank"} ,{ name: "encrypt", value :"true"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"true"} ,{ name: "visibility", value :"all"} ]},{ name: "Fee Content Popup", deleteAll: false, params: [{ name: "href", value :"http://www.cisco.com"} ,{ name: "window_type", value :"popup"} ,{ name: "encrypt", value :"false"} ,{ name: "popup_width", value :"800"} ,{ name: "popup_height", value :"600"} ,{ name: "popup_left", value :"50"} ,{ name: "popup_top", value :"50"} ,{ name: "rel", value :"none"} ,{ name: "fee_content", value :"true"} ,{ name: "visibility", value :"all"} ]}], [{name: "href",value: ""},{name: "window_type",value: "normal"},{name: "encrypt",value: "false"},{name: "fee_content",value: "false"},{name: "visibility",value: "all"},{name: "popup_width",value: "800"},{name: "popup_height",value: "600"},{name: "popup_left",value: "50"},{name: "popup_top",value: "50"},{name: "rel",value: "none"}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("docrating","/docratingmacro.jspa?contentObjectID=15652&contentObjectType=102&container=2253&containerType=14","INLINE", false, false, [], [{name: "href",value: ""},{name: "window_type",value: "normal"},{name: "encrypt",value: "false"},{name: "popup_width",value: "800"},{name: "popup_height",value: "400"},{name: "popup_left",value: "50"},{name: "popup_top",value: "50"},{name: "rel",value: "none"}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("collapsetablerowsmacro","/collapsetablerowsmacro.jspa","INLINE", true, false, [], [{name: "isdefaultcollapsed",value: ""},{name: "numberofrowstocollapse",value: ""},{name: "expandtext",value: ""},{name: "collapsetext",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("smarttablemacro","/smarttablemacro.jspa","IMAGE", true, false, [], [{name: "tablecsv",value: ""},{name: "tabletitle",value: ""},{name: "searchable",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("ciscovideomacro","/ciscovideomacro.jspa","IMAGE", true, false, [], [{name: "videotitle",value: ""},{name: "videourl",value: ""},{name: "imageurl",value: ""},{name: "videowidth",value: ""},{name: "videoheight",value: ""},{name: "videotype",value: ""},{name: "lightbox",value: ""},{name: "lightboximage",value: ""},{name: "clicktracking",value: ""},{name: "gtcategory",value: ""},{name: "gtaction",value: ""},{name: "gtlabel",value: ""},{name: "gtvalue",value: ""},{name: "src",value: ""},{name: "class",value: ""},{name: "videoid",value: ""},{name: "playertype",value: ""},{name: "playlistid",value: ""},{name: "playlistids",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("lightboxmacro","/lightboxmacro.jspa","INLINE", true, false, [], [{name: "desktopurl",value: ""},{name: "desktoplinktext",value: ""},{name: "mobileurl",value: ""},{name: "mobilelinktext",value: ""},{name: "contenturl",value: ""},{name: "viewableby",value: ""},{name: "theheight",value: ""},{name: "thewidth",value: ""},{name: "linktext",value: ""},{name: "contenttype",value: ""},{name: "noaccessurl",value: ""},{name: "noaccesslinktext",value: ""},{name: "displaytype",value: ""},{name: "iosurl",value: ""},{name: "lightboxtitle",value: ""},{name: "ishdstreaming",value: ""},{name: "poster",value: ""},{name: "transcriptalignment",value: ""},{name: "projectid",value: ""},{name: "fileid",value: ""},{name: "isinteractivetranscript",value: ""},{name: "iscaptionsenabled",value: ""},{name: "encaptionurl",value: ""},{name: "jpcaptionurl",value: ""},{name: "chcaptionurl",value: ""},{name: "escaptionurl",value: ""},{name: "defaultcaption",value: ""}], true,false));
+jive.rte.macros.push(new jive.rte.Macro("idea","","INLINE", true, false, [{ name: "default", deleteAll: true, params: [{ name: "id", value :""} ,{ name: "__default_attr", value :""} ,{ name: "title", value :""} ]}], [{name: "id",value: ""},{name: "title",value: ""},{name: "__default_attr",value: ""}], true,false));
+define('jive.rte', jive.rte);
+
+
+});
+</script><script src="/7.0.3.0/resources/scripts/i18n/keys/en.js?h=2682e82cbf295317f6d3f85965c33eb8"></script><script src="/7.0.3.0/resources/scripts/gen/6d79b5ed6dda7d0b9b62e849329562cd.js"></script>
+<script>
+var _editor_lang = "en";
+var _jive_video_picker__url = "?container=2253&containerType=14"
+var _jive_comment_images_enabled = true;
+
+
+reg(["apps/shared/models/lazy_corev3"],["/7.0.3.0/resources/scripts/gen/b9f4f961d61f8393e35c4c018c0497c8.js"]);
+
+reg(["apps/theme/lib/inputs", "soy!jive.tags.autocomplete.tagCloud", "apps/tags/model/tag_input_model", "soy!jive.tags.autocomplete.completions", "apps/userpicker/models/userpicker_source", "apps/places/actions/main", "apps/tags/view/tag_cloud", "apps/places/manage/views/header_settings", "soy!jive.place.errorMessage", "apps/places/models/place_images_model", "apps/tags/model/tag_suggestions", "soy!jive.place.fileForm", "apps/shared/views/tab_view", "apps/tags/view/tag_badges", "apps/theme/lib/plugins/single_file_upload", "apps/tags/model/tag_service", "soy!jive.tags.autocomplete.popularTags", "apps/userpicker/views/userpicker_view", "soy!jive.tags.autocomplete.tagBadge", "apps/places/manage/views/header_background"],["/7.0.3.0/resources/scripts/gen/e62ffa70c128b931177ef566934e068a.js"]);
+
+reg(["apps/share/main"],[]);
+
+reg(["soy!jive.UserPicker.soy.renderModalSkillSearchButton"],[]);
+
+reg(["apps/userpicker/views/select_skill_view", "apps/shared/models/core_deferred", "jive/promise_util"],["/7.0.3.0/resources/scripts/gen/a5104c545e213371ccfebf0d12ef5ae0.js"]);
+
+reg(["apps/static_files/static_file_modal"],["/7.0.3.0/resources/scripts/gen/1dbc43ba9b7a3d0cb6c11b1f90750218.js"]);
+
+reg(["soy!jive.error.rest.soy.errorFinding"],[]);
+
+        function initBadgeHelper(badgeHelper) {
+            badgeHelper.enableHeaderBadges();
+        }
+        require(['apps/outcomes/badgeHelper'],initBadgeHelper);
+
+
+reg(["apps/outcomes/actionView"],["/7.0.3.0/resources/scripts/gen/c0d875f7b9caea3d55836c86720a8edf.js"]);
+
+reg(["apps/outcomes/summaryView"],["/7.0.3.0/resources/scripts/gen/a36f5e0c4c800f33da57b6ebd6726a98.js"]);
+
+reg(["apps/shared/controllers/switchboard", "apps/shared/controllers/localexchange", "apps/shared/views/itemList", "apps/shared/models/core_deferred", "underscore", "jive/promise_util"],["/7.0.3.0/resources/scripts/gen/fff4a4f8605fd49b5016f521804a615b.js"]);
+
+
+            var i18n = {startFollowing : 'You are now following this document, and updates will appear in your stream.',
+                        stopFollowing  : 'You are no longer following this document.',
+                        followError    : 'An internal error occurred while following the object.'}
+
+            var jiveFollow = new jive.FollowApp.Main({objectType: 102, objectID:15652, featureName:'document', i18n:i18n});
+
+        var jiveMembership = new jive.MembershipApp.Main({objectID:2253});
+        var jiveMoveContent = new jive.Move.Content.Main({
+            objectType: 102,
+            objectID: 15652,
+            personalContainerTitleKey:'nav.bar.create.personal_container.title.document',
+            personalContainerCaptionKey:'nav.bar.create.personal_container.caption.document',
+            searchPlaceholderKey:'place.picker.move.search.document',
+            containerID: 2253,
+            containerType: 14});
+        var jiveReportAbuse = new jive.Modalizer.Main({triggers:['#jive-link-abuse a'],liveTriggers:['.js-link-abuse'], width: 'medium'});
+        $j(function() { new jive.EmailNotification.Main(15652, 102); });
+
+
+	    $j(function($) {
+		    $j(document).ready(function() {
+			    $j('a.cisco-google-tracker').click(function() {
+				    var rel = $j(this).attr('rel');
+				    if (rel) {
+					    var values = eval('(' + rel + ')');
+					    var category = values[0];
+					    var action = values[1];
+					    var label = (values.length > 2 ? values[2] : '');
+					    var value = (values.length > 3 ? values[3] : '');
+					    ga('send', 'event', category, action, label, value);
+				    }
+			    });
+		    });
+		});
+
+
+    
+    function toggleFeatured() {
+
+        ToggleFeatured.toggleFeatured(102, 15652, 2253, 14, {
+            callback:function(featured) {
+
+                if (featured) {
+                    $j('#featured-toggle-feature').hide();
+                    $j('#featured-toggle-unfeature').show();
+                } else {
+                    $j('#featured-toggle-unfeature').hide();
+                    $j('#featured-toggle-feature').show();
+                }
+
+
+
+                Jive.AlertMessage('content-featured-notify', {
+                    beforeStart:function() {
+                        if (featured) {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>This item is now featured!</div>');
+                           
+                        } else {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>You have removed this from featured content.</div>');
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+    function toggleFeaturedOnProfile() {
+        ToggleFeatured.toggleFeaturedOnProfile(102, 15652, {
+            callback:function(featured) {
+                if (featured) {
+                    $j('#featured-toggle-feature-onprofile').hide();
+                    $j('#featured-toggle-unfeature-onprofile').show();
+                } else {
+                    $j('#featured-toggle-unfeature-onprofile').hide();
+                    $j('#featured-toggle-feature-onprofile').show();
+                }
+
+
+
+                Jive.AlertMessage('content-featured-notify', {
+                    beforeStart:function() {
+                        if (featured) {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>This item is now featured!</div>');
+                        } else {
+                            $j('#content-featured-notify').html('<div><span class="jive-icon-med jive-icon-info"></span>You have removed this from featured content.</div>');
+                        }
+                    }
+                });
+            }
+        });
+    }
+
+
+reg(["apps/rate/main"],[]);
+
+reg(["soy!jive.rate.soy.renderRating"],[]);
+
+            define("commentMacroApps", ['apps/comment_app/main'], function(CommentAppMain) {
+                var options = {
+                    resourceType:       102,
+                    resourceID:         15652,
+
+                    containerType:      14,
+                    containerID:        2253,
+
+                    contentObject: {
+                            document:          15652,
+                            version:           41
+                    },
+
+                    listAction:         "/doc-comments.jspa",
+
+                    isAnonymous:        false,
+                    isThreaded:         true,
+                    isFinalized:        false,
+
+                    paginate:           true,
+
+                    pageSize:           25,
+                    isPrintPreview:     false,
+                    rteOptions : {
+                        controller    : jiveControl,
+                        preset        : "mini-w-quote",
+                        preferredMode : "advanced",
+                        startMode     : "advanced",
+                        mobileUI      : false,
+                        toggleText    : 'Show Full Editor',
+                        alwaysUseTabText : 'Always use this editor',
+                        editDisabledText : 'You are using a device that only enables you to add content.',
+                        editDisabledSummary : 'If you access {0} from a computer, you can both add and edit your content.',
+                        communityName : 'Cisco Learning Home',
+                        height        : 200,
+                        images_enabled: window._jive_comment_images_enabled
+
+                    },
+                    i18n: {
+                        confirmDeleteComment:    'Are you sure you want to delete this comment?',
+                        postSuccessText:         'Please note: your comment was added successfully, but a moderator needs to approve it before it can be posted.',
+                        postUserWroteLabel:      '{0} wrote',
+                        postGuestWroteLabel:     'Guest wrote',
+                        cmntEditingTitle:        'Editing comment',
+                        globalAjaxError:         'An unexpected error has occurred. Please make sure that your session did not expire while viewing this page.',
+                        replyToTitle:            'Reply to {0}',
+                        formSubmitPleaseWait:    'Please Wait ...',
+                        globalLoginRequired:     'You are no longer logged in. Please {0}log in{1} to continue.',
+                        loading:				 'Loading...'
+                    }
+                };
+
+
+                // Create a separate CommentApp instance for each tab.
+                jive.CommentApp.comments    = new jive.CommentApp.Main($j.extend({ commentMode: 'comments' }, options));
+
+
+                return jive.CommentApp;
+            });
+
+
+
+    $j(function() {
+        $j("#jive-link-delete a").click(function() {
+            launchDocDeleteModal();
+        });
+    });
+
+    $j(function() {
+        $j("#doc-delete-submit-button").click(function() {
+            var form = $j("#documentDeleteForm");
+            jive.util.securedForm(form).always(function() {
+                form.submit();
+            });
+        });
+    });
+
+    function launchDocDeleteModal(){
+        $j("#jive-modal-delete-doc").lightbox_me({closeSelector: ".jive-modal-close, .close"});
+        return false;
+    }
+
+
+    createModalAction = '/create-favorite-popup!input.jspa';
+
+
+(function() {var bookmarkApp = new jive.BookmarkApp.Main({element: '#bookmark-app-OaJnOu', bookmark: {bookmarkCount: 45,markedObjectType: '102', markedObjectId: '15652'}, createModalAction: 'create-favorite-popup!input.jspa', legacy: false});})();
+
+$j(function() {
+       $j('#jive-office-plugin-download').css('display','block');
+       $j('#jive-office-plugin-download > div').css('padding', '0px');
+});
+
+
+        new jive.MoreLikeThisApp.Main({
+            objectType: 102,
+            objectID: 15652,
+            containerID: "jive-more-like-this-102-15652",
+            numResults: 5,
+            noContentMessage: "No similar content found",
+            errorMessage: "Unable to retrieve content from the server:"
+        });
+
+
+reg(["apps/shared/controllers/browser_events"],["/7.0.3.0/resources/scripts/gen/94c87c133a495244c34a6dd0f4e11dd3.js"]);
+
+reg(["apps/onboarding/views/like_content"],["/7.0.3.0/resources/scripts/gen/960b500a016109071c56acea602a1947.js"]);
+
+reg(["Zapatec.Calendar"],["/7.0.3.0/resources/scripts/gen/3c303561e8503414ae99865d16b35bf5.js"]);
+
+reg(["apps/direct_messaging/factory", "apps/microblogging/views/attachment_view"],["/7.0.3.0/resources/scripts/gen/33e8711ab6a678160cd675afa80bb2b1.js"]);
+
+reg(["apps/onboarding/views/create_wall_entry"],["/7.0.3.0/resources/scripts/gen/d32a2723c1507f99c0e585d1d24a74d7.js"]);
+
+reg(["apps/onboarding/views/connect_colleagues"],["/7.0.3.0/resources/scripts/gen/36f239bb86dabfd7465333177092cde0.js"]);
+
+reg(["apps/onboarding/views/create_private_group"],["/7.0.3.0/resources/scripts/gen/18097831b944bf299634c6dc1e4f502e.js"]);
+
+reg(["apps/onboarding/views/create_thread"],["/7.0.3.0/resources/scripts/gen/8c62a069d06a077751c6063bdf2ec52b.js"]);
+
+reg(["jive/app/core_container/views/rtc_view"],["/7.0.3.0/resources/scripts/gen/fc1ffc75c159faafaff3471fddbc5e3a.js"]);
+
+reg(["apps/shared/controllers/socket_holder"],["/7.0.3.0/resources/scripts/gen/00bc51f8d316b1aa1bb1981eee5a6b96.js"]);
+
+reg(["jive/app/core_container/mock"],["/7.0.3.0/resources/scripts/gen/5087bdc3126b31e8783daefbee740184.js"]);
+
+reg(["jive/rte/syntax/SyntaxHighlighter"],["/7.0.3.0/resources/scripts/gen/00f0789245b8aced17a3e8b06d8fc9ff.js"]);
+
+reg(["apps/onboarding/views/tour_ui"],["/7.0.3.0/resources/scripts/gen/35850f37dde82431bd9170321c97815c.js"]);
+
+reg(["apps/trial/views/trial_tip_helper"],["/7.0.3.0/resources/scripts/gen/c0c5b69013bf8a360a8d18a56d7c7aff.js"]);
+
+reg(["apps/onboarding/views/follow_user"],["/7.0.3.0/resources/scripts/gen/f0fba57982ca549e92d9c01aeb7a2a2a.js"]);
+
+reg(["apps/feedback/main"],["/7.0.3.0/resources/scripts/gen/f417234cc56e792cfd1fb44a545d41e4.js"]);
+
+reg(["apps/onboarding/views/about_you"],["/7.0.3.0/resources/scripts/gen/3f2cd0c3e2fbab18940078fb00f3590e.js"]);
+
+reg(["apps/metric/models/metric_source"],["/7.0.3.0/resources/scripts/gen/696e12396dd10d511a8da5c471c2d87c.js"]);
+
+reg(["apps/onboarding/views/invite_to_group"],["/7.0.3.0/resources/scripts/gen/7e9a9e6bc57dd8a4a9e2c1e8ab1407ad.js"]);
+
+reg(["apps/onboarding/views/invite_external_users"],["/7.0.3.0/resources/scripts/gen/201c7f8eff8be0cb07daf248f9838037.js"]);
+
+reg(["apps/trial/views/trial_view"],["/7.0.3.0/resources/scripts/gen/135aab9338778e1c62e4f0dc5bb91b0a.js"]);
+
+reg(["apps/onboarding/views/add_document_collaborator"],["/7.0.3.0/resources/scripts/gen/bbee5d77b2b2fb7de91ac7f440baaa59.js"]);
+
+reg(["apps/home/views/badge_menu_template_loader"],["/7.0.3.0/resources/scripts/gen/95d436e9b21c43757d03cc63a3f72b11.js"]);
+
+reg(["apps/onboarding/views/jive_for_outlook"],["/7.0.3.0/resources/scripts/gen/9ec24cf2b7a051a67a1e14eaf099caf7.js"]);
+
+reg(["apps/onboarding/views/learn_system"],["/7.0.3.0/resources/scripts/gen/d18748e6137353a8f93b55579db1ef0e.js"]);
+
+reg(["apps/autosearch/lightbox"],["/7.0.3.0/resources/scripts/gen/14ecff205bf24bf9724edb34d51ae861.js"]);
+
+reg(["apps/onboarding/views/create_or_set_shared_group"],["/7.0.3.0/resources/scripts/gen/78927d69810c5207742578e33c1ba62a.js"]);
+
+reg(["apps/onboarding/views/jive_for_office"],["/7.0.3.0/resources/scripts/gen/ecd8c6f567eef65cd2cb73eea35edee3.js"]);
+
+reg(["apps/onboarding/views/mobile_login"],["/7.0.3.0/resources/scripts/gen/d9878d42d25b9255d3109cbaccf3dc24.js"]);
+
+reg(["jive/app/core_container/main"],["/7.0.3.0/resources/scripts/gen/1d853dd72d5d8767e5612baa557e045d.js"]);
+
+reg(["apps/onboarding/views/create_blogpost"],["/7.0.3.0/resources/scripts/gen/a38a4e404798f06b53d25f8d817bcd0d.js"]);
+
+reg(["apps/navbar/menu/satellite/main"],["/7.0.3.0/resources/scripts/gen/14532c4a64fa1e25d56a0938acd484a3.js"]);
+
+reg(["apps/filters/view/item_grid_view"],["/7.0.3.0/resources/scripts/gen/4cffa49372ae30ea667e22d029129a33.js"]);
+
+reg(["apps/onboarding/views/jive_anywhere"],["/7.0.3.0/resources/scripts/gen/f071de6baf50fffd4308e25061b2fbd2.js"]);
+
+reg(["apps/onboarding/views/create_document"],["/7.0.3.0/resources/scripts/gen/ad65cb127f6474979da7769e75534880.js"]);
+
+reg(["apps/onboarding/views/create_project"],["/7.0.3.0/resources/scripts/gen/5dca57b325a0d9900111f425161acda5.js"]);
+
+reg(["apps/onboarding/views/fill_out_profile"],["/7.0.3.0/resources/scripts/gen/37d391db01ae784b7d3f5f5b7e46c3ec.js"]);
+
+reg(["apps/social_sharing/main"],["/7.0.3.0/resources/scripts/gen/f9c080f95107d5b20d911afd49a95098.js"]);
+
+reg(["apps/onboarding/views/upload_or_move_file"],["/7.0.3.0/resources/scripts/gen/397d7832808a1624342ec2e187522a09.js"]);
+
+reg(["apps/onboarding/views/create_or_join_group"],["/7.0.3.0/resources/scripts/gen/0ebbbee30d9092366498ff38e9ead45e.js"]);
+
+reg(["apps/onboarding/views/invite_users"],["/7.0.3.0/resources/scripts/gen/7f4d04bf68a4e11e7d262d3bb7e99879.js"]);
+
+reg(["apps/trial/models/trial_panel_source"],["/7.0.3.0/resources/scripts/gen/5950fdf3f8ee936fd18f91e064b4306c.js"]);
+
+reg(["apps/onboarding/views/create_comment_or_message"],["/7.0.3.0/resources/scripts/gen/07f435007c2cfb1472a7edfbbd6fca56.js"]);
+
+reg(["apps/browse/container/model/container_source"],[]);
+
+reg(["jive/app/core_container/common_container"],["/7.0.3.0/resources/scripts/gen/14bd06a4f15ca2ba667db6cc37e384f9.js"]);
+
+reg(["jive.nitro.reputationMenu.MenuMain"],["/7.0.3.0/resources/scripts/gen/b91a071d43d73b8eb7c8b0531f48af78.js"]);
+
+reg(["jive.nitro.reputationMenu.MenuListView"],["/7.0.3.0/resources/scripts/gen/25d0136b89bf28d0318f4cffbefeeccc.js"]);
+
+$j(function(){require(['jive.nitro.reputationMenu.Main'], function(Main) {new Main({reputationCenterUrl: '/reputation-center', apiKey: "247573e2cfdb47a79ec0210162481690", timeStamp: "1511153601", signature: "51e464b9f4614426da94b08a3a967f13", server: "https://solutions.nitro.bunchball.net/nitro/json", userID: "1186909", localizationEnabled: false, i18n: {pointsText: 'Points', yourStatusText: 'Your Reputation', emptyNextLevelText: 'You have achieved the highest level', emptyNextMissionText: 'You have completed all of the missions'}});});});
+
+reg(["apps/activity_stream/models/activity_stream_source"],[]);
+
+$j(document).ready(function() {new jive.nitro.challenges.Main({currentJiveUserID: 1186909, userID: "1186909"});});
+
+$j(document).ready(function() {new jive.nitro.content.Main({apiKey: "247573e2cfdb47a79ec0210162481690", timeStamp: "1511153601", signature: "51e464b9f4614426da94b08a3a967f13", server: "https://solutions.nitro.bunchball.net/nitro/json", userID: "1186909", localizationEnabled: false});});
+
+$j(function() {var tipsApp = new jive.Tips.Main({tipGroups:[{"id":"globalContentTipGroup","dismissKey":"jive.tip.globalContentTipGroup","triggerSelector":null,"triggerEventType":null,"refreshSelector":null,"visible":true,"visibleTips":[{"id":"globalContentTipSocialActions","visible":true,"cssClass":null,"templateName":"jive.tips.socialActionsTip","templateData":{},"titleKey":null,"bodyKey":null,"closeSelector":null,"hiddenSelectorAllowed":false,"loadSelector":null,"aboveOffset":0,"belowOffset":0,"selector":".j-social-actions"}],"state":{"currentTipID":null,"dismissed":false}}], skippedTipGroupIDs: ["jive.tip.welcomeTipGroup"]});});
+
+require(['jquery', 'apps/navbar/menu/satellite/main', 'documentReady'], function($, SatellteNavMenu){new SatellteNavMenu('#j-satNav','#j-satNav-menu',{darkPopover:true,user:{"type":3,"link":"/people/remosyxu%40gmail.com","subject":"Remosy","iconCss":"jive-icon-profile","archetype":"people","thumbnailTemplate":"jive.browse.user.thumbnailUserItem","detailTemplate":"jive.browse.user.detailUserItem","objectTypeName":null,"objectTypeFeatureName":null,"displayExternallyVisibleVisualCue":false,"prop":{"avatarID":"6779","presence":{"userExternalID":null,"online":false,"jsObject":"null"},"profileImage":{"url":"/images/jive-profile-default-portrait.png","viewingSelf":true,"default":true},"search":{"defaultEnabled":true},"isVisibleToPartner":false,"profile":{"title":null,"company":null,"department":null,"lastLoggedInDate":"1511153274913","biography":null,"mobilePhoneNumber":null,"primaryPhoneNumber":null,"faxNumber":null,"joinDate":null,"pagerNumber":null,"homePhoneNumber":null,"alternatePhoneNumber":null,"hireOrJoinDate":null,"expertise":null,"occupation":null,"primaryURL":null,"homeAddress":null,"primaryEmailAddressVisible":false,"alternateEmailAddress":null,"primaryEmailAddress":{"email":"remosyxu@gmail.com","type":"WORK","typeString":"work"},"timeZone":null,"address":null,"location":null,"url":null}},"username":"remosyxu@gmail.com","displayName":"Remosy","anonymous":false,"enabled":true,"external":false,"partner":false,"email":"remosyxu@gmail.com","entitled":true,"visible":true,"avatarID":"6779","id":"1186909","objectType":3,"modificationDate":"1511153559066","modificationTime":"Less than a minute ago","unmodified":false,"creationTime":"5 minutes ago","creationDate":"1511153273273"}});});
+
+$j(function(){new jive.Navbar.Menu.Create.Main('#navCreate', '#menuCreate');});
+
+$j(function(){new jive.Navbar.Menu.Create.Main('#navCreate', '#menuCreate');});
+
+$j(function(){require(['apps/navbar/menu/home/navbar_menu_home_main'], function(Main) {jive.Navbar.Menu.Home.GlobalController = new Main('#j-satNav-indicator');});});
+
+$j("#nav-browse-menu").on('click', function(){$j("#nav-browse-dropdown").popover({context: $j("#nav-browse-menu .j-nav-more"), destroyOnClose: false, closeOtherPopovers: true, nudge:  {top:10,left:0}, addClass: 'nav-browse-pop'});});
+
+$j("#footer-language-menu").on('click', function(){$j("#footer-language-dropdown").popover({context: $j("#footer-language-menu .j-nav-more"), destroyOnClose: false, closeOtherPopovers: true, nudge:  {top:10,left:0}, addClass: 'language-menu-pop'});});
+
+require([ 'apps/activity_stream/activity_notifier', 'apps/activity_stream/models/activity_stream_source' ], function(ActivityNotifier, ActivityStreamSource) {$j(function(){if (ActivityStreamSource) {var streamServices = new ActivityStreamSource(); streamServices.newCount().addCallback(function (data){jive.switchboard.emit('activityStream.poll', data);});}});}); $j(window).load(function(){jive.onLoadEventComplete = true;});
+
+reg(["jive/promise_util"],[]);
+
+reg(["apps/microblogging/link_builder"],["/7.0.3.0/resources/scripts/gen/21fa654fc47876adebc729cee9bfb3b8.js"]);
+
+reg(["apps/microblogging/status_input_drop_down"],["/7.0.3.0/resources/scripts/gen/f78a984f094eed2164b551523d41aadc.js"]);
+
+reg(["jive/fresh_action_queue"],[]);
+
+reg(["apps/status_input/data_source", "underscore"],["/7.0.3.0/resources/scripts/gen/ef1f7fc95d94cf3985985a00686cd1b1.js"]);
+
+reg(["jive/app/rte/artifacts"],[]);
+
+window.tinyMCE_GZ = { loaded: true };
+
+</script>
+<!-- plugin javascript --><!-- end plugin javascript -->	<script language="JavaScript" type="text/javascript">var pageName = '';pageName += 'D';pageName += '-' + 'DOC-15652';var contentTitleStr = '' + 'CCNA Security: SSL VPNs'; var contentTitleAsciiOnly = contentTitleStr.replace(/[^\x00-\x7F]/g, ""); pageName += '-' + contentTitleAsciiOnly;var webData = {siteCode:"CLN", pageName:pageName, pageType:"", contentType:'Document', contentCode:'D', siteSection:'Security (CCNA Security)', site:"CLN", environment:'prod', language:"en", loginStatus:'Logged-In', userType:'Cisco Guest', hier1:'Certifications \x3e Security (CCNA Security)', events: ["pageView"]};</script>	<script type="text/javascript">$j(document).ready( function() {$j(".paywall-launch-link.downloadable").each(function(){this.href += newAkamaiToken;});$j(".cln-lightboxmacro-no-access").hide(); var showDesktopLink = $j(".paywall-launch-link.mobileurl").css("display") == "none"; var showMobileLink = $j(".paywall-launch-link.desktopurl").css("display") == "none"; if (showMobileLink){$j(".paywall-launch-link.mobileurl.cln-lightboxmacro").show();}if (showDesktopLink){$j(".paywall-launch-link.desktopurl.cln-lightboxmacro").show();}$j(".not-practice-quiz.cln-lightboxmacro").show();});</script><script type="text/javascript">$j(document).ready( function() {$j('.tooltip').tooltipster({arrow: false, maxWidth: 500, position: 'right', theme: 'tooltipster-shadow'});$j("a[tier-info$='potential'].cisco-visibility-potential").show(); $j(".cisco-visibility-premium").hide();});</script><script src="/7.0.3.0/resources/scripts/gen/a119104b86fe44d7b2afaef095253bfa.js"></script>
+
+<script type="text/javascript">window.NREUM||(NREUM={});NREUM.info={"applicationID":"7306122","applicationTime":107,"beacon":"bam.nr-data.net","queueTime":0,"licenseKey":"e1336a1f47","transactionName":"b1xUN0YHXEVRWxIMWFYWYxFdSVZZU0tJTw==","agent":"","errorBeacon":"bam.nr-data.net"}</script><script type="text/javascript">if (typeof _satellite != "undefined") _satellite.pageBottom();</script></body></html>
